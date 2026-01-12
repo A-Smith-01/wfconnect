@@ -1,0 +1,41 @@
+.groupGrid{
+    flex-direction: column;
+    width: 100%;
+}
+
+.group{
+    display: flex;
+    aspect-ratio: 4;
+    border-radius: 16px;
+    padding-left: 10px;
+}
+
+.groupGrid :not(:last-child){
+    margin-bottom: 10px;
+}
+
+.groupImages{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.groupImages image{
+    aspect-ratio: 1;
+}
+
+.groupInfo{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.groupInfo h2{
+    color: var(--text-primary);
+}
+
+.groupInfo div{
+    color: var(--text-secondary);
+}

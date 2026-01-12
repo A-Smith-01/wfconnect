@@ -1,0 +1,6 @@
+.gridContainer{
+    display: flex;
+    position: relative;
+    width: 550px;
+    justify-content: center;
+}

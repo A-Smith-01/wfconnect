@@ -1,0 +1,25 @@
+.selectGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.gridItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: rgb(197, 197, 197);
+    box-shadow: 2px 2px 5px rgb(150, 150, 150);
+    aspect-ratio: 1;
+}
+
+.gridItem:hover{
+    cursor: pointer;
+}
+
+.gridItem.selected{
+    background-color: rgb(161, 161, 161);
+    box-shadow: inset 2px 2px 5px rgb(110, 110, 110);
+}

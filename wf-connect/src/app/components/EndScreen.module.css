@@ -1,0 +1,21 @@
+.endModal{
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.endModal h2{
+    font-size: 30px;
+    color: var(--text-primary);
+}
+
+.guesses{
+    font-size: 24px;
+}

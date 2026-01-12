@@ -1,0 +1,16 @@
+.page {
+  --background: #3c3c42;
+  --foreground: #d61616;
+
+  --text-primary: #000;
+  --text-secondary: #666;
+
+
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist-sans);
+  background-color: var(--background);
+}
+
