@@ -1,11 +1,11 @@
-import GameContainer from "./components/GameContainer";
+import GameLoader from "./components/GameLoader";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <GameContainer />
+        <GameLoader />
       </main>
     </div>
   );

@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import GameGrid from './GameGrid';
 import EndScreen from './EndScreen';
-import { PHgridItems, PHGroups } from '../placeholders/gridData';
 import colourMap from '../colourMap';
 import styles from './GameContainer.module.css';
 
@@ -13,9 +12,9 @@ function guessToString(guess, groups){
     }, "");
 }
 
-export default function GameContainer() {
+export default function GameContainer({gridItems, groups}) {
     const [lives, setLives] = useState(4);
-    const [gridItems, setGridItems] = useState(PHgridItems);
+    const [remainingGridItems, setGridItems] = useState(gridItems);
     const [selectedItems, setSelectedItems] = useState([]);
     const [foundGroups, setFoundGroups] = useState([]);
     const [guesses, setGuesses] = useState([]);
@@ -36,14 +35,14 @@ export default function GameContainer() {
         // Placeholder logic for submission
         if (selectedItems.length === 4) {
             let correctGroup = null;
-            PHGroups.map(group => {   
+            groups.map(group => {   
                 if (group.items.every(item => selectedItems.includes(item))) {
                     correctGroup = group;
                 }
             });
 
             if (correctGroup) {
-                const items = correctGroup.items.map(id => gridItems.find(item => item.id === id));
+                const items = correctGroup.items.map(id => remainingGridItems.find(item => item.id === id));
                 const group = {
                     id: correctGroup.id,
                     name: correctGroup.name,
@@ -51,14 +50,14 @@ export default function GameContainer() {
                 }
 
                 // Remove found group from grid
-                setGridItems(gridItems.filter(item => !correctGroup.items.includes(item.id)));
+                setGridItems(remainingGridItems.filter(item => !correctGroup.items.includes(item.id)));
                 setFoundGroups([...foundGroups, group]);
 
             } else {
                 alert('Incorrect selection. You lost a life.');
                 setLives(lives - 1);
             }
-            setGuesses([...guesses, guessToString(selectedItems, PHGroups)]);
+            setGuesses([...guesses, guessToString(selectedItems, groups)]);
             setSelectedItems([]);
         }
     }
@@ -67,9 +66,9 @@ export default function GameContainer() {
     <div className="game-container">
         <h1>WF-Connect</h1>
         <div className={styles.gridContainer}>
-        {foundGroups.length === PHGroups.length || lives === 0 ? <EndScreen guesses={guesses} lives={lives} /> : null}
+        {foundGroups.length === groups.length || lives === 0 ? <EndScreen guesses={guesses} lives={lives} /> : null}
         <GameGrid 
-            items={gridItems} 
+            items={remainingGridItems} 
             selectedItems={selectedItems} 
             handleSelectItem={handleSelectItem} 
             foundGroups={foundGroups} 

@@ -1,0 +1,838 @@
+{
+  "AX-52": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/AK47Weapon.png.webp?v2",
+    "link": "https://wiki.warframe.com/w/AX-52"
+  },
+  "Acceltra": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/SapientPrimaryWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Acceltra"
+  },
+  "Aeolak": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnRifleErsatzWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Aeolak"
+  },
+  "Afentis": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnHopliteSpear.png.webp",
+    "link": "https://wiki.warframe.com/w/Afentis"
+  },
+  "Alternox": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/GyreRifleWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Alternox"
+  },
+  "Ambassador": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Skins/CrpArSniper.png.webp",
+    "link": "https://wiki.warframe.com/w/Ambassador"
+  },
+  "Amprex": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Amprex.png.webp",
+    "link": "https://wiki.warframe.com/w/Amprex"
+  },
+  "Arca Plasmor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/ArcaPlasmor.png.webp",
+    "link": "https://wiki.warframe.com/w/Arca_Plasmor"
+  },
+  "Argonak": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Argonak.png.webp",
+    "link": "https://wiki.warframe.com/w/Argonak"
+  },
+  "Artemis Bow": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ExaltedWeapons/ExaltedBow.png.webp",
+    "link": "https://wiki.warframe.com/w/Artemis_Bow"
+  },
+  "Astilla": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Astilla.png.webp",
+    "link": "https://wiki.warframe.com/w/Astilla"
+  },
+  "Attica": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Attica.png.webp",
+    "link": "https://wiki.warframe.com/w/Attica"
+  },
+  "Basmu": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/SentRifleNewWarGun.png.webp",
+    "link": "https://wiki.warframe.com/w/Basmu"
+  },
+  "Battacor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/CrpSentExperimentRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Battacor"
+  },
+  "Baza": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Baza.png.webp",
+    "link": "https://wiki.warframe.com/w/Baza"
+  },
+  "Boar": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Boar.png.webp",
+    "link": "https://wiki.warframe.com/w/Boar"
+  },
+  "Boltor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Boltor.png.webp",
+    "link": "https://wiki.warframe.com/w/Boltor"
+  },
+  "Braton": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Braton.png.webp",
+    "link": "https://wiki.warframe.com/w/Braton"
+  },
+  "Bubonico": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/InfArmCannon.png.webp",
+    "link": "https://wiki.warframe.com/w/Bubonico"
+  },
+  "Burston": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Burston.png.webp",
+    "link": "https://wiki.warframe.com/w/Burston"
+  },
+  "Buzlok": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Buzlok.png.webp",
+    "link": "https://wiki.warframe.com/w/Buzlok"
+  },
+  "Cedo": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Cedo.png.webp",
+    "link": "https://wiki.warframe.com/w/Cedo"
+  },
+  "Cernos": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Cernos.png.webp",
+    "link": "https://wiki.warframe.com/w/Cernos"
+  },
+  "Cinta": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/DaxDuviriAsymmetricalLongBow.png.webp",
+    "link": "https://wiki.warframe.com/w/Cinta"
+  },
+  "Convectrix": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Convectrix.png.webp",
+    "link": "https://wiki.warframe.com/w/Convectrix"
+  },
+  "Corinth": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Corinth.png.webp",
+    "link": "https://wiki.warframe.com/w/Corinth"
+  },
+  "Daikyu": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Daikyu.png.webp",
+    "link": "https://wiki.warframe.com/w/Daikyu"
+  },
+  "Dera": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Dera.png.webp",
+    "link": "https://wiki.warframe.com/w/Dera"
+  },
+  "Drakgoon": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Drakgoon.png.webp",
+    "link": "https://wiki.warframe.com/w/Drakgoon"
+  },
+  "Dread": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Dread.png.webp",
+    "link": "https://wiki.warframe.com/w/Dread"
+  },
+  "EFV-5 Jupiter": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/LasGooAK.png.webp",
+    "link": "https://wiki.warframe.com/w/EFV-5_Jupiter"
+  },
+  "Evensong": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnChoirBow.png.webp",
+    "link": "https://wiki.warframe.com/w/Evensong"
+  },
+  "Exergis": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/CrpShapeBlastShotgun.png.webp",
+    "link": "https://wiki.warframe.com/w/Exergis"
+  },
+  "Felarx": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/ZarimanPumpShotgun.png.webp",
+    "link": "https://wiki.warframe.com/w/Felarx"
+  },
+  "Ferrox": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Ferrox.png.webp",
+    "link": "https://wiki.warframe.com/w/Ferrox"
+  },
+  "Flux Rifle": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/FluxRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Flux_Rifle"
+  },
+  "Fulmin": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnWispRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Fulmin"
+  },
+  "Glaxion": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Glaxion.png.webp",
+    "link": "https://wiki.warframe.com/w/Glaxion"
+  },
+  "Gorgon": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Gorgon.png.webp",
+    "link": "https://wiki.warframe.com/w/Gorgon"
+  },
+  "Grakata": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Grakata.png.webp",
+    "link": "https://wiki.warframe.com/w/Grakata"
+  },
+  "Grinlok": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Grinlok.png.webp",
+    "link": "https://wiki.warframe.com/w/Grinlok"
+  },
+  "Harpak": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Harpak.png.webp",
+    "link": "https://wiki.warframe.com/w/Harpak"
+  },
+  "Hek": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Hek.png.webp",
+    "link": "https://wiki.warframe.com/w/Hek"
+  },
+  "Hema": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Hema.png.webp",
+    "link": "https://wiki.warframe.com/w/Hema"
+  },
+  "Higasa": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/GunbrellaWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Higasa"
+  },
+  "Hind": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Hind.png.webp",
+    "link": "https://wiki.warframe.com/w/Hind"
+  },
+  "Ignis": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Ignis.png.webp",
+    "link": "https://wiki.warframe.com/w/Ignis"
+  },
+  "Javlok": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Javlok.png.webp",
+    "link": "https://wiki.warframe.com/w/Javlok"
+  },
+  "Karak": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Karak.png.webp",
+    "link": "https://wiki.warframe.com/w/Karak"
+  },
+  "Kohm": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Kohm.png.webp",
+    "link": "https://wiki.warframe.com/w/Kohm"
+  },
+  "Komorex": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/CrpSentAmalgSniper.png.webp",
+    "link": "https://wiki.warframe.com/w/Komorex"
+  },
+  "Lanka": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Lanka.png.webp",
+    "link": "https://wiki.warframe.com/w/Lanka"
+  },
+  "Latron": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Latron.png.webp",
+    "link": "https://wiki.warframe.com/w/Latron"
+  },
+  "Lenz": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Lenz.png.webp",
+    "link": "https://wiki.warframe.com/w/Lenz"
+  },
+  "Lizzie": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ExaltedWeapons/TempleExaltedGuitar.png.webp",
+    "link": "https://wiki.warframe.com/w/Lizzie"
+  },
+  "MK1-Braton": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Braton.png.webp",
+    "link": "https://wiki.warframe.com/w/MK1-Braton"
+  },
+  "MK1-Paris": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Paris.png.webp",
+    "link": "https://wiki.warframe.com/w/MK1-Paris"
+  },
+  "MK1-Strun": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/MK1-Strun.png.webp",
+    "link": "https://wiki.warframe.com/w/MK1-Strun"
+  },
+  "Miter": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Miter.png.webp",
+    "link": "https://wiki.warframe.com/w/Miter"
+  },
+  "Mutalist Cernos": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/MutalistCernos.png.webp",
+    "link": "https://wiki.warframe.com/w/Mutalist_Cernos"
+  },
+  "Mutalist Quanta": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/MutalistQuanta.png.webp",
+    "link": "https://wiki.warframe.com/w/Mutalist_Quanta"
+  },
+  "Nagantaka": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/GarudaCrossbow.png.webp",
+    "link": "https://wiki.warframe.com/w/Nagantaka"
+  },
+  "Nataruk": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/OmicrusBow.png.webp",
+    "link": "https://wiki.warframe.com/w/Nataruk"
+  },
+  "Neutralizer": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ExaltedWeapons/FrumentariusExaltedSniper.png.webp",
+    "link": "https://wiki.warframe.com/w/Neutralizer"
+  },
+  "Ogris": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Ogris.png.webp",
+    "link": "https://wiki.warframe.com/w/Ogris"
+  },
+  "Opticor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Opticor.png.webp",
+    "link": "https://wiki.warframe.com/w/Opticor"
+  },
+  "Panthera": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Panthera.png.webp",
+    "link": "https://wiki.warframe.com/w/Panthera"
+  },
+  "Paracyst": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Paracyst.png.webp",
+    "link": "https://wiki.warframe.com/w/Paracyst"
+  },
+  "Paris": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Paris.png.webp",
+    "link": "https://wiki.warframe.com/w/Paris"
+  },
+  "Penta": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Penta.png.webp",
+    "link": "https://wiki.warframe.com/w/Penta"
+  },
+  "Perigale": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnQuadSniperRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Perigale"
+  },
+  "Phage": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Phage.png.webp",
+    "link": "https://wiki.warframe.com/w/Phage"
+  },
+  "Phantasma": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Phantasma.png.webp",
+    "link": "https://wiki.warframe.com/w/Phantasma"
+  },
+  "Phenmor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/ZarimanSemiAutoRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Phenmor"
+  },
+  "Proboscis Cernos": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/DerelictCernos.png.webp",
+    "link": "https://wiki.warframe.com/w/Proboscis_Cernos"
+  },
+  "Purgator 1": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/LasrianNox.png.webp",
+    "link": "https://wiki.warframe.com/w/Purgator_1"
+  },
+  "Quanta": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Quanta.png.webp",
+    "link": "https://wiki.warframe.com/w/Quanta"
+  },
+  "Quartakk": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Quartakk.png.webp",
+    "link": "https://wiki.warframe.com/w/Quartakk"
+  },
+  "Quellor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/RailjackRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Quellor"
+  },
+  "Rauta": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/PaxDuviricusShotgun.png.webp",
+    "link": "https://wiki.warframe.com/w/Rauta"
+  },
+  "Reconifex": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnBeltFedRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Reconifex"
+  },
+  "Rubico": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Rubico.png.webp",
+    "link": "https://wiki.warframe.com/w/Rubico"
+  },
+  "Scourge": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Scourge.png.webp",
+    "link": "https://wiki.warframe.com/w/Scourge"
+  },
+  "Shedu": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Shedu.png.webp",
+    "link": "https://wiki.warframe.com/w/Shedu"
+  },
+  "Simulor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Simulor.png.webp",
+    "link": "https://wiki.warframe.com/w/Simulor"
+  },
+  "Snipetron": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Snipetron.png.webp",
+    "link": "https://wiki.warframe.com/w/Snipetron"
+  },
+  "Sobek": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Sobek.png.webp",
+    "link": "https://wiki.warframe.com/w/Sobek"
+  },
+  "Soma": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Soma.png.webp",
+    "link": "https://wiki.warframe.com/w/Soma"
+  },
+  "Sporothrix": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/InfSniperRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Sporothrix"
+  },
+  "Stahlta": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/CrpRubanRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Stahlta"
+  },
+  "Steflos": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnoLotusPodShotgun.png.webp",
+    "link": "https://wiki.warframe.com/w/Steflos"
+  },
+  "Stradavar": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Stradavar.png.webp",
+    "link": "https://wiki.warframe.com/w/Stradavar"
+  },
+  "Strun": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Strun.png.webp",
+    "link": "https://wiki.warframe.com/w/Strun"
+  },
+  "Supra": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Supra.png.webp",
+    "link": "https://wiki.warframe.com/w/Supra"
+  },
+  "Sybaris": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Sybaris.png.webp",
+    "link": "https://wiki.warframe.com/w/Sybaris"
+  },
+  "Synapse": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Synapse.png.webp",
+    "link": "https://wiki.warframe.com/w/Synapse"
+  },
+  "Tenora": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Tenora.png.webp",
+    "link": "https://wiki.warframe.com/w/Tenora"
+  },
+  "Tetra": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Tetra.png.webp",
+    "link": "https://wiki.warframe.com/w/Tetra"
+  },
+  "Thornbak": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/ModQuestRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Thornbak"
+  },
+  "Tiberon": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Tiberon.png.webp",
+    "link": "https://wiki.warframe.com/w/Tiberon"
+  },
+  "Tigris": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Tigris.png.webp",
+    "link": "https://wiki.warframe.com/w/Tigris"
+  },
+  "Tonkor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Tonkor.png.webp",
+    "link": "https://wiki.warframe.com/w/Tonkor"
+  },
+  "Torid": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Torid.png.webp",
+    "link": "https://wiki.warframe.com/w/Torid"
+  },
+  "Trumna": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/ThanotechRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Trumna"
+  },
+  "Vectis": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Vectis.png.webp",
+    "link": "https://wiki.warframe.com/w/Vectis"
+  },
+  "Veldt": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Veldt.png.webp",
+    "link": "https://wiki.warframe.com/w/Veldt"
+  },
+  "Vinquibus": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnBayonetRifle.png.webp",
+    "link": "https://wiki.warframe.com/w/Vinquibus"
+  },
+  "Vulkar": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Vulkar.png.webp",
+    "link": "https://wiki.warframe.com/w/Vulkar"
+  },
+  "Zarr": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Zarr.png.webp",
+    "link": "https://wiki.warframe.com/w/Zarr"
+  },
+  "Zenith": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Zenith.png.webp",
+    "link": "https://wiki.warframe.com/w/Zenith"
+  },
+  "Zhuge": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Zhuge.png.webp",
+    "link": "https://wiki.warframe.com/w/Zhuge"
+  },
+  "Acrid": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Acrid.png.webp",
+    "link": "https://wiki.warframe.com/w/Acrid"
+  },
+  "Aegrit": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/GrnVorStickyBomb.png.webp",
+    "link": "https://wiki.warframe.com/w/Aegrit"
+  },
+  "Afuris": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Afuris.png.webp",
+    "link": "https://wiki.warframe.com/w/Afuris"
+  },
+  "Akarius": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/SapientPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Akarius"
+  },
+  "Akbolto": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Akbolto.png.webp",
+    "link": "https://wiki.warframe.com/w/Akbolto"
+  },
+  "Akbronco": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Akbronco.png.webp",
+    "link": "https://wiki.warframe.com/w/Akbronco"
+  },
+  "Akjagara": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Akjagara.png.webp",
+    "link": "https://wiki.warframe.com/w/Akjagara"
+  },
+  "Aklato": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Aklato.png.webp",
+    "link": "https://wiki.warframe.com/w/Aklato"
+  },
+  "Aklex": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Aklex.png.webp",
+    "link": "https://wiki.warframe.com/w/Aklex"
+  },
+  "Akmagnus": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Akmagnus.png.webp",
+    "link": "https://wiki.warframe.com/w/Akmagnus"
+  },
+  "Aksomati": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Aksomati.png.webp",
+    "link": "https://wiki.warframe.com/w/Aksomati"
+  },
+  "Akstiletto": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Akstileto.png.webp",
+    "link": "https://wiki.warframe.com/w/Akstiletto"
+  },
+  "Akvasto": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Akvasto.png.webp",
+    "link": "https://wiki.warframe.com/w/Akvasto"
+  },
+  "Akzani": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Akzani.png.webp",
+    "link": "https://wiki.warframe.com/w/Akzani"
+  },
+  "Angstrum": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Angstrum.png.webp",
+    "link": "https://wiki.warframe.com/w/Angstrum"
+  },
+  "Arca Scisco": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/ArcaScisco.png.webp",
+    "link": "https://wiki.warframe.com/w/Arca_Scisco"
+  },
+  "Athodai": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TnJetTurbinePistolWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Athodai"
+  },
+  "Atomos": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Atomos.png.webp",
+    "link": "https://wiki.warframe.com/w/Atomos"
+  },
+  "Azima": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Azima.png.webp",
+    "link": "https://wiki.warframe.com/w/Azima"
+  },
+  "Balefire Charger": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ExaltedWeapons/IronFrameBlastWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Balefire_Charger"
+  },
+  "Ballistica": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Ballistica.png.webp",
+    "link": "https://wiki.warframe.com/w/Ballistica"
+  },
+  "Bolto": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Bolto.png.webp",
+    "link": "https://wiki.warframe.com/w/Bolto"
+  },
+  "Brakk": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Brakk.png.webp",
+    "link": "https://wiki.warframe.com/w/Brakk"
+  },
+  "Bronco": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Bronco.png.webp",
+    "link": "https://wiki.warframe.com/w/Bronco"
+  },
+  "Cantare": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TnChoirframeKunai.png.webp",
+    "link": "https://wiki.warframe.com/w/Cantare"
+  },
+  "Castanas": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Castanas.png.webp",
+    "link": "https://wiki.warframe.com/w/Castanas"
+  },
+  "Catabolyst": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/InfBeamPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Catabolyst"
+  },
+  "Catchmoon": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Kitguns/SUModularSecondaryBarrelA.png.webp",
+    "link": "https://wiki.warframe.com/w/Catchmoon"
+  },
+  "Cestra": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Cestra.png.webp",
+    "link": "https://wiki.warframe.com/w/Cestra"
+  },
+  "Cyanex": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/CrpSentAmalgPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Cyanex"
+  },
+  "Cycron": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Cycron.png.webp",
+    "link": "https://wiki.warframe.com/w/Cycron"
+  },
+  "Despair": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Despair.png.webp",
+    "link": "https://wiki.warframe.com/w/Despair"
+  },
+  "Detron": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Detron.png.webp",
+    "link": "https://wiki.warframe.com/w/Detron"
+  },
+  "Dual Cestra": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/DualCestras.png.webp",
+    "link": "https://wiki.warframe.com/w/Dual_Cestra"
+  },
+  "Dual Toxocyst": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/DualToxocyst.png.webp",
+    "link": "https://wiki.warframe.com/w/Dual_Toxocyst"
+  },
+  "EFV-8 Mars": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/LasGooPistolWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/EFV-8_Mars"
+  },
+  "Embolist": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Embolist.png.webp",
+    "link": "https://wiki.warframe.com/w/Embolist"
+  },
+  "Epitaph": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TnWraithSidearmWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Epitaph"
+  },
+  "Furis": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Furis.png.webp",
+    "link": "https://wiki.warframe.com/w/Furis"
+  },
+  "Fusilai": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Fusilai.png.webp",
+    "link": "https://wiki.warframe.com/w/Fusilai"
+  },
+  "Gammacor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Gammacor.png.webp",
+    "link": "https://wiki.warframe.com/w/Gammacor"
+  },
+  "Gaze": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Kitguns/SUModularSecondaryBarrelD.png.webp",
+    "link": "https://wiki.warframe.com/w/Gaze"
+  },
+  "Glory": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ExaltedWeapons/ChoirEruptWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Glory"
+  },
+  "Grimoire": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png.webp",
+    "link": "https://wiki.warframe.com/w/Grimoire"
+  },
+  "Hikou": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Hikou.png.webp",
+    "link": "https://wiki.warframe.com/w/Hikou"
+  },
+  "Hystrix": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Hystrix.png.webp",
+    "link": "https://wiki.warframe.com/w/Hystrix"
+  },
+  "Knell": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Knell.png.webp",
+    "link": "https://wiki.warframe.com/w/Knell"
+  },
+  "Kohmak": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Kohmak.png.webp",
+    "link": "https://wiki.warframe.com/w/Kohmak"
+  },
+  "Kompressa": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/YareliPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Kompressa"
+  },
+  "Kraken": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Kraken.png.webp",
+    "link": "https://wiki.warframe.com/w/Kraken"
+  },
+  "Kulstar": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Kulstar.png.webp",
+    "link": "https://wiki.warframe.com/w/Kulstar"
+  },
+  "Kunai": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Kunai.png.webp",
+    "link": "https://wiki.warframe.com/w/Kunai"
+  },
+  "Laetum": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/ZarimanHeavyPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Laetum"
+  },
+  "Lato": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Lato.png.webp",
+    "link": "https://wiki.warframe.com/w/Lato"
+  },
+  "Lex": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Lex.png.webp",
+    "link": "https://wiki.warframe.com/w/Lex"
+  },
+  "MK1-Furis": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Furis.png.webp",
+    "link": "https://wiki.warframe.com/w/MK1-Furis"
+  },
+  "MK1-Kunai": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Kunai.png.webp",
+    "link": "https://wiki.warframe.com/w/MK1-Kunai"
+  },
+  "Magnus": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Magnus.png.webp",
+    "link": "https://wiki.warframe.com/w/Magnus"
+  },
+  "Marelok": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Marelok.png.webp",
+    "link": "https://wiki.warframe.com/w/Marelok"
+  },
+  "Noctua": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ExaltedWeapons/ExaltedTome.png.webp",
+    "link": "https://wiki.warframe.com/w/Noctua"
+  },
+  "Nukor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Nukor.png.webp",
+    "link": "https://wiki.warframe.com/w/Nukor"
+  },
+  "Ocucor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/CrpSentExperimentPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Ocucor"
+  },
+  "Onos": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/EntratiWristGun.png.webp",
+    "link": "https://wiki.warframe.com/w/Onos"
+  },
+  "Pandero": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Pandero.png.webp",
+    "link": "https://wiki.warframe.com/w/Pandero"
+  },
+  "Plinx": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/CrpBlastorWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Plinx"
+  },
+  "Pox": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Pox.png.webp",
+    "link": "https://wiki.warframe.com/w/Pox"
+  },
+  "Pyrana": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Pyrana.png.webp",
+    "link": "https://wiki.warframe.com/w/Pyrana"
+  },
+  "Quatz": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Amphis.png.webp",
+    "link": "https://wiki.warframe.com/w/Quatz"
+  },
+  "Rattleguts": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Kitguns/SUModularSecondaryBarrelC.png.webp",
+    "link": "https://wiki.warframe.com/w/Rattleguts"
+  },
+  "Regulators": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ExaltedWeapons/SlingerPistols.png.webp",
+    "link": "https://wiki.warframe.com/w/Regulators"
+  },
+  "Riot-848": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/1999EntHybridPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Riot-848"
+  },
+  "Scyotid": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TnOraxiaFlechette.png.webp",
+    "link": "https://wiki.warframe.com/w/Scyotid"
+  },
+  "Seer": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Seer.png.webp",
+    "link": "https://wiki.warframe.com/w/Seer"
+  },
+  "Sepulcrum": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/ThanotechPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Sepulcrum"
+  },
+  "Sicarus": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Sicarus.png.webp",
+    "link": "https://wiki.warframe.com/w/Sicarus"
+  },
+  "Sonicor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Sonicor.png.webp",
+    "link": "https://wiki.warframe.com/w/Sonicor"
+  },
+  "Spectra": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Spectra.png.webp",
+    "link": "https://wiki.warframe.com/w/Spectra"
+  },
+  "Spira": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Spira.png.webp",
+    "link": "https://wiki.warframe.com/w/Spira"
+  },
+  "Sporelacer": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ModularWeapons/InfModular/InfBarrelEgg.png.webp",
+    "link": "https://wiki.warframe.com/w/Sporelacer"
+  },
+  "Staticor": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Staticor.png.webp",
+    "link": "https://wiki.warframe.com/w/Staticor"
+  },
+  "Stubba": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Stubba.png.webp",
+    "link": "https://wiki.warframe.com/w/Stubba"
+  },
+  "Stug": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Stug.png.webp",
+    "link": "https://wiki.warframe.com/w/Stug"
+  },
+  "Talons": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Talons.png.webp",
+    "link": "https://wiki.warframe.com/w/Talons"
+  },
+  "Tombfinger": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Kitguns/SUModularSecondaryBarrelB.png.webp",
+    "link": "https://wiki.warframe.com/w/Tombfinger"
+  },
+  "Twin Grakatas": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TwinGrakatas.png.webp",
+    "link": "https://wiki.warframe.com/w/Twin_Grakatas"
+  },
+  "Twin Gremlins": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TwinGremlin.png.webp",
+    "link": "https://wiki.warframe.com/w/Twin_Gremlins"
+  },
+  "Twin Kohmak": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TwinKohmak.png.webp",
+    "link": "https://wiki.warframe.com/w/Twin_Kohmak"
+  },
+  "Twin Rogga": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TwinRogga.png.webp",
+    "link": "https://wiki.warframe.com/w/Twin_Rogga"
+  },
+  "Twin Vipers": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TwinVipers.png.webp",
+    "link": "https://wiki.warframe.com/w/Twin_Vipers"
+  },
+  "Tysis": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Tysis.png.webp",
+    "link": "https://wiki.warframe.com/w/Tysis"
+  },
+  "Vasto": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Vasto.png.webp",
+    "link": "https://wiki.warframe.com/w/Vasto"
+  },
+  "Velox": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/OdaliskSmgWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Velox"
+  },
+  "Vermisplicer": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/ModularWeapons/InfModular/InfBarrelBeam.png.webp",
+    "link": "https://wiki.warframe.com/w/Vermisplicer"
+  },
+  "Vesper 77": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/LasSilencedPistolWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Vesper_77"
+  },
+  "Viper": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Viper.png.webp",
+    "link": "https://wiki.warframe.com/w/Viper"
+  },
+  "Zakti": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Zakti.png.webp",
+    "link": "https://wiki.warframe.com/w/Zakti"
+  },
+  "Zylok": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/ConclaveLeverPistol.png.webp",
+    "link": "https://wiki.warframe.com/w/Zylok"
+  },
+  "Zymos": {
+    "image": "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/InfUziWeapon.png.webp",
+    "link": "https://wiki.warframe.com/w/Zymos"
+  }
+}
