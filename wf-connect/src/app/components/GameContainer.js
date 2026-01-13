@@ -4,6 +4,7 @@ import GameGrid from './GameGrid';
 import EndScreen from './EndScreen';
 import colourMap from '../colourMap';
 import styles from './GameContainer.module.css';
+import useNotification from '../hooks/useNotification';
 
 function guessToString(guess, groups){
     return guess.reduce((acc, itemId) => {
@@ -18,6 +19,7 @@ export default function GameContainer({gridItems, groups}) {
     const [selectedItems, setSelectedItems] = useState([]);
     const [foundGroups, setFoundGroups] = useState([]);
     const [guesses, setGuesses] = useState([]);
+    const { text: notifText, visible: notifVisible, showNotification } = useNotification();
 
     function handleSelectItem(itemId) {
         if (selectedItems.includes(itemId)) {
@@ -32,16 +34,20 @@ export default function GameContainer({gridItems, groups}) {
     }
 
     function handleSubmit() {
-        // Placeholder logic for submission
         if (selectedItems.length === 4) {
+            let highestMatches = 0;
             let correctGroup = null;
+            // Check number of selected items in each group
             groups.map(group => {   
-                if (group.items.every(item => selectedItems.includes(item))) {
+                const matches = group.items.filter(item => selectedItems.includes(item)).length;
+                
+                if (matches > highestMatches) {
+                    highestMatches = matches;
                     correctGroup = group;
                 }
             });
 
-            if (correctGroup) {
+            if (highestMatches === 4) {
                 const items = correctGroup.items.map(id => remainingGridItems.find(item => item.id === id));
                 const group = {
                     id: correctGroup.id,
@@ -53,8 +59,13 @@ export default function GameContainer({gridItems, groups}) {
                 setGridItems(remainingGridItems.filter(item => !correctGroup.items.includes(item.id)));
                 setFoundGroups([...foundGroups, group]);
 
+            } else if (highestMatches == 3) {
+                console.log("Almost there");
+                showNotification("Almost there!", 2000);
+                setLives(lives - 1);
             } else {
-                alert('Incorrect selection. You lost a life.');
+                console.log("Incorrect");
+                showNotification("Incorrect");
                 setLives(lives - 1);
             }
             setGuesses([...guesses, guessToString(selectedItems, groups)]);
@@ -72,6 +83,8 @@ export default function GameContainer({gridItems, groups}) {
             selectedItems={selectedItems} 
             handleSelectItem={handleSelectItem} 
             foundGroups={foundGroups} 
+            notifText={notifText}
+            notifVisible={notifVisible}
         />
         </div>
         <button className="submit" onClick={handleSubmit}>Submit</button>

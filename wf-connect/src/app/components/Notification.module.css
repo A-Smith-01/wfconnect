@@ -1,0 +1,17 @@
+div.notification{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+    background-color: var(--foreground);
+    color: var(--text-primary);
+    padding: 5px;
+    border-radius: 8px;
+    font-size: large;
+    font-weight: 400;
+}
+
+div.visible{
+    display: block;
+}
