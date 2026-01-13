@@ -1,6 +1,14 @@
 import items from '../data/items.json';
 import generatePuzzle from './generatePuzzle';
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 export default function generateGridData() {
     // `generatePuzzle` may return an array or an object of groups. Normalize
     // into an array where each group has an `id` (number or string), `name`,
@@ -26,7 +34,7 @@ export default function generateGridData() {
         return {id: idx, name: group.id, items: itemList};
     })
 
-    const gridItems = [];
+    let gridItems = [];
 
     normalizedGroups.forEach((group) => {
         group.items.forEach((itemId) => {
@@ -39,6 +47,8 @@ export default function generateGridData() {
             }
         });
     });
+
+    gridItems = shuffleArray(gridItems);
     
     console.log('Normalized groups:', normalizedGroups);
     console.log('Final grid items:', gridItems);
