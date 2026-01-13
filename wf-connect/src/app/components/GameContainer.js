@@ -37,6 +37,17 @@ export default function GameContainer({gridItems, groups}) {
         if (selectedItems.length === 4) {
             let highestMatches = 0;
             let correctGroup = null;
+            let alreadyGuessed = false;
+            // Check if guess was already made
+            console.log(selectedItems);
+            guesses.forEach(guess => {
+                const guessSet = new Set(guess);
+                const selectedSet = new Set(selectedItems);
+                if (guessSet.size === selectedSet.size && [...guessSet].every(value => selectedSet.has(value))) {
+                    alreadyGuessed = true;
+                }
+            });
+
             // Check number of selected items in each group
             groups.map(group => {   
                 const matches = group.items.filter(item => selectedItems.includes(item)).length;
@@ -46,8 +57,11 @@ export default function GameContainer({gridItems, groups}) {
                     correctGroup = group;
                 }
             });
-
-            if (highestMatches === 4) {
+            if (alreadyGuessed) {
+                console.log("Already guessed");
+                showNotification("Already guessed!", 1500);
+                return;
+            }else if (highestMatches === 4) {
                 const items = correctGroup.items.map(id => remainingGridItems.find(item => item.id === id));
                 const group = {
                     id: correctGroup.id,
@@ -61,14 +75,14 @@ export default function GameContainer({gridItems, groups}) {
 
             } else if (highestMatches == 3) {
                 console.log("Almost there");
-                showNotification("Almost there!", 2000);
+                showNotification("Almost there!", 1500);
                 setLives(lives - 1);
             } else {
                 console.log("Incorrect");
                 showNotification("Incorrect");
                 setLives(lives - 1);
             }
-            setGuesses([...guesses, guessToString(selectedItems, groups)]);
+            setGuesses([...guesses, selectedItems]);
             setSelectedItems([]);
         }
     }
@@ -77,7 +91,7 @@ export default function GameContainer({gridItems, groups}) {
     <div className="game-container">
         <h1>WF-Connect</h1>
         <div className={styles.gridContainer}>
-        {foundGroups.length === groups.length || lives === 0 ? <EndScreen guesses={guesses} lives={lives} /> : null}
+        {foundGroups.length === groups.length || lives === 0 ? <EndScreen guesses={guesses.map(guess => guessToString(guess, groups))} lives={lives} /> : null}
         <GameGrid 
             items={remainingGridItems} 
             selectedItems={selectedItems} 

@@ -10,9 +10,6 @@ function shuffleArray(array) {
 }
 
 export default function generateGridData() {
-    // `generatePuzzle` may return an array or an object of groups. Normalize
-    // into an array where each group has an `id` (number or string), `name`,
-    // and `items` array.
     const rawGroups = generatePuzzle();
 
     const groupsArray = Array.isArray(rawGroups)
