@@ -1,9 +1,11 @@
 import styles from './selectGrid.module.css';
 import Image from 'next/image';
+import FlipMove from 'react-flip-move';
 
 export default function SelectGrid({ items,selectedItems, handleSelectItem }) {
     return (
         <div className={styles.selectGrid}>
+            <FlipMove>
             {items.map((item) => (
                 <button 
                     key={item.id} 
@@ -14,6 +16,7 @@ export default function SelectGrid({ items,selectedItems, handleSelectItem }) {
                     {/* <p>{item.name}</p> */}
                 </button>
             ))}
+            </FlipMove>
         </div>
     )
 }

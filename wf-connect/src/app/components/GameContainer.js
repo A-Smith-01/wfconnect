@@ -33,6 +33,20 @@ export default function GameContainer({gridItems, groups}) {
         setSelectedItems([]);
     }
 
+    function revealGroup(group){
+        console.log("Revealing group:", group);
+        // Rearrange group items to front of grid
+        const groupItems = remainingGridItems.filter(item => group.items.includes(item.id));
+        const otherItems = remainingGridItems.filter(item => !group.items.includes(item.id));
+        setGridItems([...groupItems, ...otherItems]);
+        // Wait for animation then remove group items
+        setTimeout(() => {
+            setGridItems(remainingGridItems.filter(item => !group.items.includes(item.id)));
+            setFoundGroups([...foundGroups, {...group, items: groupItems}]);
+        }, 500);
+
+    }
+
     function handleSubmit() {
         if (selectedItems.length === 4) {
             let highestMatches = 0;
@@ -62,16 +76,10 @@ export default function GameContainer({gridItems, groups}) {
                 showNotification("Already guessed!", 1500);
                 return;
             }else if (highestMatches === 4) {
-                const items = correctGroup.items.map(id => remainingGridItems.find(item => item.id === id));
-                const group = {
-                    id: correctGroup.id,
-                    name: correctGroup.name,
-                    items: items
-                }
-
+                revealGroup(correctGroup);
                 // Remove found group from grid
-                setGridItems(remainingGridItems.filter(item => !correctGroup.items.includes(item.id)));
-                setFoundGroups([...foundGroups, group]);
+                // setGridItems(remainingGridItems.filter(item => !correctGroup.items.includes(item.id)));
+                // setFoundGroups([...foundGroups, group]);
 
             } else if (highestMatches == 3) {
                 console.log("Almost there");
