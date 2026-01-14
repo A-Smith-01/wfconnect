@@ -26,7 +26,7 @@
     margin-right: 10px;
 }
 
-.controlButton.disabled{
+.controlButton:disabled{
     box-shadow: none;
     cursor: default;
     color: gray;

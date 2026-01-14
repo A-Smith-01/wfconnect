@@ -23,3 +23,13 @@
     background-color: rgb(161, 161, 161);
     box-shadow: inset 2px 2px 5px rgb(110, 110, 110);
 }
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.shakeAnimation {
+    animation: shake 0.5s ease-in-out;
+}

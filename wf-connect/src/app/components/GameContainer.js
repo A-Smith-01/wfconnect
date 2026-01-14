@@ -19,9 +19,13 @@ export default function GameContainer({gridItems, groups}) {
     const [selectedItems, setSelectedItems] = useState([]);
     const [foundGroups, setFoundGroups] = useState([]);
     const [guesses, setGuesses] = useState([]);
+    const [freezeInput, setFreezeInput] = useState(false);
+    const [shakingItems, setShakingItems] = useState([]);
     const { text: notifText, visible: notifVisible, showNotification } = useNotification();
+    const disabled = selectedItems.length !== 4;
 
     function handleSelectItem(itemId) {
+        if (freezeInput) return;
         if (selectedItems.includes(itemId)) {
             setSelectedItems(selectedItems.filter(id => id !== itemId));
         } else if (selectedItems.length < 4) {
@@ -49,6 +53,7 @@ export default function GameContainer({gridItems, groups}) {
 
     function handleSubmit() {
         if (selectedItems.length === 4) {
+            setFreezeInput(true);
             let highestMatches = 0;
             let correctGroup = null;
             let alreadyGuessed = false;
@@ -74,20 +79,24 @@ export default function GameContainer({gridItems, groups}) {
             if (alreadyGuessed) {
                 console.log("Already guessed");
                 showNotification("Already guessed!", 1500);
+                setFreezeInput(false);
                 return;
             }else if (highestMatches === 4) {
                 revealGroup(correctGroup);
-            } else if (highestMatches == 3) {
-                console.log("Almost there");
-                showNotification("Almost there!", 1500);
-                setLives(lives - 1);
+                setSelectedItems([]);
+                setFreezeInput(false);
             } else {
                 console.log("Incorrect");
-                showNotification("Incorrect");
+                if (highestMatches === 3) showNotification("Almost there!", 1500);
+                setShakingItems(selectedItems);
                 setLives(lives - 1);
+                setTimeout(() => {
+                    setShakingItems([])
+                    setSelectedItems([]);
+                    setFreezeInput(false);
+                }, 500);
             }
             setGuesses([...guesses, selectedItems]);
-            setSelectedItems([]);
         }
     }
 
@@ -103,12 +112,13 @@ export default function GameContainer({gridItems, groups}) {
             foundGroups={foundGroups} 
             notifText={notifText}
             notifVisible={notifVisible}
+            shakingItems={shakingItems}
         />
         </div>
         <div className={styles.gridBelow}>
             <div className="flex">
-                <button className={`${styles.controlButton} ${styles.submit}`} onClick={handleSubmit}>Submit</button>
-                <button className={`${styles.controlButton} ${styles.reset}`} onClick={handleDeselectAll}>Deselect All</button>
+                <button className={`${styles.controlButton}`} onClick={handleSubmit} disabled={disabled}>Submit</button>
+                <button className={`${styles.controlButton}`} onClick={handleDeselectAll}>Deselect All</button>
             </div>
             <div className={styles.lives}>{"X ".repeat(lives)}</div>
         </div>
