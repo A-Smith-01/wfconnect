@@ -4,3 +4,36 @@
     width: 550px;
     justify-content: center;
 }
+
+.gridBelow{
+    display: flex;
+    margin-top: 20px;
+    padding: 0px 20px
+
+}
+
+.controlButton{
+    font-size: 22px;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px black;
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+}
+
+.controlButton:not(:last-child){
+    margin-right: 10px;
+}
+
+.controlButton.disabled{
+    box-shadow: none;
+    cursor: default;
+    color: gray;
+}
+
+.lives{
+    font-size: 28px;
+    margin: auto;
+    text-align: left;
+}

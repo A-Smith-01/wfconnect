@@ -36,7 +36,11 @@ a {
 }
 
 button{
-  border: none;
+  all:unset
+}
+
+.flex{
+  display: flex;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,3 +48,5 @@ button{
     color-scheme: dark;
   }
 }
+
+

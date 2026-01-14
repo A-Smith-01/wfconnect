@@ -77,10 +77,6 @@ export default function GameContainer({gridItems, groups}) {
                 return;
             }else if (highestMatches === 4) {
                 revealGroup(correctGroup);
-                // Remove found group from grid
-                // setGridItems(remainingGridItems.filter(item => !correctGroup.items.includes(item.id)));
-                // setFoundGroups([...foundGroups, group]);
-
             } else if (highestMatches == 3) {
                 console.log("Almost there");
                 showNotification("Almost there!", 1500);
@@ -109,9 +105,13 @@ export default function GameContainer({gridItems, groups}) {
             notifVisible={notifVisible}
         />
         </div>
-        <button className="submit" onClick={handleSubmit}>Submit</button>
-        <button className="reset" onClick={handleDeselectAll}>Deselect All</button>
-        <div className="lives">{"X ".repeat(lives)}</div>
+        <div className={styles.gridBelow}>
+            <div className="flex">
+                <button className={`${styles.controlButton} ${styles.submit}`} onClick={handleSubmit}>Submit</button>
+                <button className={`${styles.controlButton} ${styles.reset}`} onClick={handleDeselectAll}>Deselect All</button>
+            </div>
+            <div className={styles.lives}>{"X ".repeat(lives)}</div>
+        </div>
     </div>
     );
 }
