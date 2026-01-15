@@ -19,3 +19,12 @@
 .guesses{
     font-size: 24px;
 }
+
+.copyButton{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 5px;
+    margin: auto;
+}
