@@ -5,6 +5,7 @@ import EndScreen from './EndScreen';
 import colourMap from '../colourMap';
 import styles from './GameContainer.module.css';
 import useNotification from '../hooks/useNotification';
+import sleep from '../helpers/sleep';
 
 function guessToString(guess, groups){
     return guess.reduce((acc, itemId) => {
@@ -21,6 +22,7 @@ export default function GameContainer({gridItems, groups}) {
     const [guesses, setGuesses] = useState([]);
     const [freezeInput, setFreezeInput] = useState(false);
     const [shakingItems, setShakingItems] = useState([]);
+    const [showGameOver, setShowGameOver] = useState(false);
     const { text: notifText, visible: notifVisible, showNotification } = useNotification();
     const disabled = selectedItems.length !== 4;
 
@@ -37,18 +39,42 @@ export default function GameContainer({gridItems, groups}) {
         setSelectedItems([]);
     }
 
-    function revealGroup(group){
-        console.log("Revealing group:", group);
-        // Rearrange group items to front of grid
-        const groupItems = remainingGridItems.filter(item => group.items.includes(item.id));
-        const otherItems = remainingGridItems.filter(item => !group.items.includes(item.id));
-        setGridItems([...groupItems, ...otherItems]);
-        // Wait for animation then remove group items
-        setTimeout(() => {
-            setGridItems(remainingGridItems.filter(item => !group.items.includes(item.id)));
-            setFoundGroups([...foundGroups, {...group, items: groupItems}]);
-        }, 500);
+    function revealGroup(group, currentGridItems, currentFoundGroups){
+        return new Promise((resolve) => {
+            console.log("Revealing group:", group);
+            // Rearrange group items to front of grid
+            const groupItems = currentGridItems.filter(item => group.items.includes(item.id));
+            const otherItems = currentGridItems.filter(item => !group.items.includes(item.id));
+            setGridItems([...groupItems, ...otherItems]);
+            // Wait for animation then remove group items
+            setTimeout(() => {
+                setGridItems(otherItems);
+                setFoundGroups([...currentFoundGroups, {...group, items: groupItems}]);
+                resolve();
+            }, 500);
+        });
+    }
 
+    async function handleGameOver(){
+        setFreezeInput(true);
+        let currentItems = remainingGridItems;
+        let currentFoundGroups = foundGroups;
+        
+        // Reveal all remaining groups
+        for (const group of groups) {
+            if (!currentFoundGroups.find(g => g.id === group.id)) {
+                const groupItems = currentItems.filter(item => group.items.includes(item.id));
+                await revealGroup(group, currentItems, currentFoundGroups);
+                currentItems = currentItems.filter(item => !group.items.includes(item.id));
+                currentFoundGroups = [...currentFoundGroups, {...group, items: groupItems}];
+                await sleep(1000);
+            }
+        }
+
+        // Show game over screen after delay
+        
+        setShowGameOver(true);
+        
     }
 
     function handleSubmit() {
@@ -57,6 +83,7 @@ export default function GameContainer({gridItems, groups}) {
             let highestMatches = 0;
             let correctGroup = null;
             let alreadyGuessed = false;
+            let gameOver = false;
             // Check if guess was already made
             console.log(selectedItems);
             guesses.forEach(guess => {
@@ -76,15 +103,24 @@ export default function GameContainer({gridItems, groups}) {
                     correctGroup = group;
                 }
             });
+
+            // Handle guess outcome
             if (alreadyGuessed) {
                 console.log("Already guessed");
                 showNotification("Already guessed!", 1500);
                 setFreezeInput(false);
                 return;
             }else if (highestMatches === 4) {
-                revealGroup(correctGroup);
+                const groupItems = remainingGridItems.filter(item => correctGroup.items.includes(item.id));
+                revealGroup(correctGroup, remainingGridItems, foundGroups).then(() => {
+                    setGridItems(remainingGridItems.filter(item => !correctGroup.items.includes(item.id)));
+                    setFoundGroups([...foundGroups, {...correctGroup, items: groupItems}]);
+                });
                 setSelectedItems([]);
                 setFreezeInput(false);
+                if (foundGroups.length + 1 === groups.length) {
+                    gameOver = true;
+                }
             } else {
                 console.log("Incorrect");
                 if (highestMatches === 3) showNotification("Almost there!", 1500);
@@ -95,8 +131,16 @@ export default function GameContainer({gridItems, groups}) {
                     setSelectedItems([]);
                     setFreezeInput(false);
                 }, 500);
+                if (lives - 1 <= 0) {
+                    gameOver = true;
+                }
             }
             setGuesses([...guesses, selectedItems]);
+
+            // Check for game over
+            if (gameOver) {
+                handleGameOver();
+            }
         }
     }
 
@@ -104,7 +148,7 @@ export default function GameContainer({gridItems, groups}) {
     <div className="game-container">
         <h1>WF-Connect</h1>
         <div className={styles.gridContainer}>
-        {foundGroups.length === groups.length || lives === 0 ? <EndScreen guesses={guesses.map(guess => guessToString(guess, groups))} lives={lives} /> : null}
+        {showGameOver ? <EndScreen guesses={guesses.map(guess => guessToString(guess, groups))} lives={lives} /> : null}
         <GameGrid 
             items={remainingGridItems} 
             selectedItems={selectedItems} 
