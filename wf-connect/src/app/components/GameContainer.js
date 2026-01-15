@@ -70,11 +70,7 @@ export default function GameContainer({gridItems, groups}) {
                 await sleep(1000);
             }
         }
-
-        // Show game over screen after delay
-        
         setShowGameOver(true);
-        
     }
 
     function handleSubmit() {
@@ -112,10 +108,7 @@ export default function GameContainer({gridItems, groups}) {
                 return;
             }else if (highestMatches === 4) {
                 const groupItems = remainingGridItems.filter(item => correctGroup.items.includes(item.id));
-                revealGroup(correctGroup, remainingGridItems, foundGroups).then(() => {
-                    setGridItems(remainingGridItems.filter(item => !correctGroup.items.includes(item.id)));
-                    setFoundGroups([...foundGroups, {...correctGroup, items: groupItems}]);
-                });
+                revealGroup(correctGroup, remainingGridItems, foundGroups)
                 setSelectedItems([]);
                 setFreezeInput(false);
                 if (foundGroups.length + 1 === groups.length) {
