@@ -33,9 +33,21 @@
 }
 
 .lives{
-    font-size: 28px;
+    font-size: 52px;
     margin: auto;
-    text-align: left;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    color: #B92525;
+    width: 200px;
+    font-weight: 900;
+}
+
+.healthbar{
+    height: 5px;
+    background-color: #B92525;
+    margin-left: auto;
 }
 
 .title{

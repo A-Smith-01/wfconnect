@@ -162,7 +162,10 @@ export default function GameContainer({gridItems, groups}) {
                 <button className={`${styles.controlButton}`} onClick={handleSubmit} disabled={disabled}>Submit</button>
                 <button className={`${styles.controlButton}`} onClick={handleDeselectAll} disabled={freezeInput}>Deselect All</button>
             </div>
-            <div className={styles.lives}>{"X ".repeat(lives)}</div>
+            <div className={styles.lives}>
+                {lives > 0 ? lives : "DEAD"}
+                <div className={styles.healthbar} style={{"width":`${100*lives/4}%`}}/>
+            </div>
             </>
             }
         </div>
