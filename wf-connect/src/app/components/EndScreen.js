@@ -28,17 +28,17 @@ export default function EndModal({guesses, lives, setShow}) {
     };
 
     return (
-        <>
-        <div className={styles.endModal}>
-            <h2><b>{endMessage}</b></h2>
-            {lives > 0 && <p>Found with <b>{lives}</b> lives remaining</p>}
-            <div className={styles.guesses}>
-                {guesses.map((guess,index) => <p key={index}>{guess}</p>)}
+        <div className={styles.modalBackground}>
+            <div className={styles.endModal}>
+                <h2><b>{endMessage}</b></h2>
+                {lives > 0 && <p>Found with <b>{lives}</b> {lives > 1 ? 'lives' : 'life'} remaining</p>}
+                <div className={styles.guesses}>
+                    {guesses.map((guess,index) => <p key={index}>{guess}</p>)}
+                </div>
+                <button className={styles.modalButton} onClick={handleCopy}>Share your results</button>
+                <button className={styles.modalButton} onClick={() => setShow(false)}>Show Puzzle</button>
             </div>
-            <button className={styles.modalButton} onClick={handleCopy}>Share your results</button>
-            <button className={styles.modalButton} onClick={() => setShow(false)}>Show Puzzle</button>
+            <Notification text={notifText} visible={notifVisible} />
         </div>
-        <Notification text={notifText} visible={notifVisible} />
-        </>
     )
 }
