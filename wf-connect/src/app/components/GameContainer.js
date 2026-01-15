@@ -142,7 +142,7 @@ export default function GameContainer({gridItems, groups}) {
 
     return (
     <div className="game-container">
-        <h1>WF-Connect</h1>
+        <h1 className={styles.title}>WFConnect</h1>
         <div className={styles.gridContainer}>
         {showGameOver ? <EndScreen guesses={guesses.map(guess => guessToString(guess, groups))} lives={lives} /> : null}
         <GameGrid 
