@@ -9,8 +9,8 @@ function shuffleArray(array) {
     return array;
 }
 
-export default function generateGridData() {
-    const rawGroups = generatePuzzle();
+export default function generateGridData(seed) {
+    const rawGroups = seed ? generatePuzzle({seed:seed}) : generatePuzzle();
 
     const groupsArray = Array.isArray(rawGroups)
         ? rawGroups
