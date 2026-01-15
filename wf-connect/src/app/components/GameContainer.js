@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
+import { useLocalStorage } from 'react-use';
 import GameGrid from './GameGrid';
 import EndScreen from './EndScreen';
 import colourMap from '../colourMap';
@@ -14,17 +15,41 @@ function guessToString(guess, groups){
     }, "");
 }
 
-export default function GameContainer({gridItems, groups}) {
-    const [lives, setLives] = useState(4);
-    const [remainingGridItems, setGridItems] = useState(gridItems);
+export default function GameContainer({gridItems, groups, newGameSeed}) {
+    const [isHydrated, setIsHydrated] = useState(false);
+    const [lives, setLives, clearLives] = useLocalStorage('lives', 4);
+    const [remainingGridItems, setGridItems, clearGridItems] = useLocalStorage('remainingGridItems', gridItems);
     const [selectedItems, setSelectedItems] = useState([]);
-    const [foundGroups, setFoundGroups] = useState([]);
-    const [guesses, setGuesses] = useState([]);
+    const [foundGroups, setFoundGroups, clearFoundGroups] = useLocalStorage('foundGroups', []);
+    const [guesses, setGuesses, clearGuesses] = useLocalStorage('guesses', []);
     const [freezeInput, setFreezeInput] = useState(false);
     const [shakingItems, setShakingItems] = useState([]);
     const [showGameOver, setShowGameOver] = useState(false);
     const { text: notifText, visible: notifVisible, showNotification } = useNotification();
     const disabled = selectedItems.length !== 4;
+
+    useEffect(() => {
+        setIsHydrated(true);
+    }, []);
+
+    // Reset game state if new seed
+    useEffect(() => {
+        if (newGameSeed) {
+            clearLives();
+            clearGridItems();
+            clearFoundGroups();
+            clearGuesses();
+        }else{
+            // Check for game over
+            if (lives <= 0 || foundGroups.length === groups.length) {
+                setShowGameOver(true);
+            }
+        }
+    }, [isHydrated]);
+
+    if (!isHydrated) {
+        return null;
+    }
 
     function handleSelectItem(itemId) {
         if (freezeInput) return;
