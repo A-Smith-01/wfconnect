@@ -3,20 +3,20 @@ import styles from './EndScreen.module.css';
 import useNotification from '../hooks/useNotification';
 import Notification from './Notification';
 
-export default function EndModal({guesses, lives}) {
+export default function EndModal({guesses, lives, setShow}) {
     const { text: notifText, visible: notifVisible, showNotification } = useNotification();
     
     let endMessage = "";
     if(lives == 0){
-       endMessage = "Novice"
+       endMessage = "NOVICE"
     } else if(lives == 4) {
-        endMessage = "Grandmaster"
+        endMessage = "GRANDMASTER"
     } else if(lives == 3) {
-        endMessage = "Sage"
+        endMessage = "SAGE"
     } else if(lives == 2) {
-        endMessage = "Hunter"
+        endMessage = "HUNTER"
     } else {
-        endMessage = "Adept"
+        endMessage = "ADEPT"
     }
 
     const handleCopy = async () => {
@@ -30,12 +30,13 @@ export default function EndModal({guesses, lives}) {
     return (
         <>
         <div className={styles.endModal}>
-            <h2>{endMessage}</h2>
+            <h2><b>{endMessage}</b></h2>
             {lives > 0 && <p>Found with <b>{lives}</b> lives remaining</p>}
             <div className={styles.guesses}>
                 {guesses.map((guess,index) => <p key={index}>{guess}</p>)}
             </div>
-            <button className={styles.copyButton} onClick={handleCopy}>Share your results</button>
+            <button className={styles.modalButton} onClick={handleCopy}>Share your results</button>
+            <button className={styles.modalButton} onClick={() => setShow(false)}>Show Puzzle</button>
         </div>
         <Notification text={notifText} visible={notifVisible} />
         </>

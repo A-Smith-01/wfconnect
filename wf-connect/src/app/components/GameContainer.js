@@ -144,7 +144,7 @@ export default function GameContainer({gridItems, groups}) {
     <div className="game-container">
         <h1 className={styles.title}>WFConnect</h1>
         <div className={styles.gridContainer}>
-        {showGameOver ? <EndScreen guesses={guesses.map(guess => guessToString(guess, groups))} lives={lives} /> : null}
+        {showGameOver ? <EndScreen guesses={guesses.map(guess => guessToString(guess, groups))} lives={lives} setShow={setShowGameOver} /> : null}
         <GameGrid 
             items={remainingGridItems} 
             selectedItems={selectedItems} 
@@ -156,11 +156,15 @@ export default function GameContainer({gridItems, groups}) {
         />
         </div>
         <div className={styles.gridBelow}>
+            {foundGroups.length == 4 ? <button className={`${styles.controlButton} ${styles.showResultsButton}`} onClick={() => setShowGameOver(true)}>Show Results</button> : 
+            <>
             <div className="flex">
                 <button className={`${styles.controlButton}`} onClick={handleSubmit} disabled={disabled}>Submit</button>
                 <button className={`${styles.controlButton}`} onClick={handleDeselectAll} disabled={freezeInput}>Deselect All</button>
             </div>
             <div className={styles.lives}>{"X ".repeat(lives)}</div>
+            </>
+            }
         </div>
     </div>
     );
