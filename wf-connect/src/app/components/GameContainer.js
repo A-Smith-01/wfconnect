@@ -42,10 +42,13 @@ export default function GameContainer({gridItems, groups}) {
     function revealGroup(group, currentGridItems, currentFoundGroups){
         return new Promise((resolve) => {
             console.log("Revealing group:", group);
-            // Rearrange group items to front of grid
             const groupItems = currentGridItems.filter(item => group.items.includes(item.id));
             const otherItems = currentGridItems.filter(item => !group.items.includes(item.id));
-            setGridItems([...groupItems, ...otherItems]);
+            // Rearrange group items to front of grid unless it's the last group
+            if (currentFoundGroups.length != 3){
+                setGridItems([...groupItems, ...otherItems]);
+            }
+            
             // Wait for animation then remove group items
             setTimeout(() => {
                 setGridItems(otherItems);
@@ -155,7 +158,7 @@ export default function GameContainer({gridItems, groups}) {
         <div className={styles.gridBelow}>
             <div className="flex">
                 <button className={`${styles.controlButton}`} onClick={handleSubmit} disabled={disabled}>Submit</button>
-                <button className={`${styles.controlButton}`} onClick={handleDeselectAll}>Deselect All</button>
+                <button className={`${styles.controlButton}`} onClick={handleDeselectAll} disabled={freezeInput}>Deselect All</button>
             </div>
             <div className={styles.lives}>{"X ".repeat(lives)}</div>
         </div>

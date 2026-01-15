@@ -5,7 +5,7 @@ import FlipMove from 'react-flip-move';
 export default function SelectGrid({ items,selectedItems, handleSelectItem, shakingItems }) {
     return (
         <div className={styles.selectGrid}>
-            <FlipMove>
+            <FlipMove leaveAnimation="none">
             {items.map((item) => (
                 <button 
                     key={item.id} 
