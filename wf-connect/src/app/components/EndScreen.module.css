@@ -13,33 +13,47 @@
 .endModal{
     width: 80%;
     aspect-ratio: 1;
-    background-color: white;
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    border-radius: 16px;
     text-align: center;
-    box-shadow: 2px 2px 10px 2px rgb(116, 116, 116);
+    box-shadow: 0px 0px 2px 1px var(--text-secondary);
+    color: var(--text-primary);
 }
 
 .endModal h2{
     font-size: 42px;
-    color: var(--text-primary);
+    color: var(--text-secondary);
+}
+
+.endMessage{
+    font-size: 18px;
+}
+
+.lives{
+    color: var(--text-secondary);
 }
 
 .guesses{
-    margin: auto;
+    margin: 10px auto;
 }
 
 .modalButton{
+    background-color: var(--foreground);
     cursor: pointer;
-    border: 1px solid black;
-    border-radius: 8px;
     width: fit-content;
     padding: 5px;
     margin: 20px auto;
     font-size: 22px;
+    box-shadow: 0px 1px 1px 0px var(--text-primary);
+    border-bottom: 2px solid transparent;
+}
+.modalButton:hover{
+    box-shadow: 0px 0px 1px 0px var(--text-secondary);
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--text-secondary);
 }
 
 .guess{

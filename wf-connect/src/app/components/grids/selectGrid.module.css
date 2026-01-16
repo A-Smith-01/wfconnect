@@ -1,7 +1,7 @@
 .selectGrid > *{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 10px;
+    row-gap: 6px;
     column-gap: 10px;
 }
 
@@ -9,10 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 16px;
-    background-color: rgb(197, 197, 197);
-    box-shadow: 2px 2px 5px rgb(150, 150, 150);
+    margin: 0;
+    background-color: var(--foreground);
+    box-shadow: 0px 0px 1px var(--accents);
     aspect-ratio: 1;
+    border-bottom: 4px solid transparent;
 }
 
 .gridItem:hover{
@@ -20,8 +21,8 @@
 }
 
 .gridItem.selected{
-    background-color: rgb(161, 161, 161);
-    box-shadow: inset 2px 2px 5px rgb(110, 110, 110);
+    border-bottom: 4px solid var(--text-secondary);
+    box-shadow: 0px 0px 2px 0px var(--text-secondary);
 }
 
 @keyframes shake {

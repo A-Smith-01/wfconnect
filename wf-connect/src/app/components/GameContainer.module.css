@@ -13,13 +13,7 @@
 }
 
 .controlButton{
-    font-size: 22px;
-    padding: 5px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px black;
-    background-color: lightgray;
-    color: black;
-    cursor: pointer;
+    
 }
 
 .controlButton:not(:last-child){
@@ -54,9 +48,13 @@
     text-align: center;
     font-family: var(--font-ailerons);
     font-size: 52;
-    color: aliceblue;
+    color: var(--text-primary);
 }
 
 .showResultsButton{
     margin: auto;
+}
+
+.highlight{
+    color: var(--text-secondary);
 }

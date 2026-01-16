@@ -39,19 +39,18 @@ export default function EndModal({groups, guesses, lives, setShow}) {
         const text = `WFConnect ${date}\n${guessesString.join('\n')}`;
         await navigator.clipboard.writeText(text);
         showNotification("Results copied to clipboard!");
-        setTimeout(() => setCopied(false), 2000);
     };
 
     return (
         <div className={styles.modalBackground}>
             <div className={styles.endModal}>
                 <h2><b>{endMessage}</b></h2>
-                {lives > 0 && <p>Found with <b>{lives}</b> {lives > 1 ? 'lives' : 'life'} remaining</p>}
+                {lives > 0 && <p className={styles.endMessage}>Found with <b className={styles.lives}>{lives}</b> {lives > 1 ? 'lives' : 'life'} remaining</p>}
                 <ul className={styles.guesses}>
                     {guesses.map((guess,index) => <li className={styles.guess} key={index}>{guess.map(itemId => itemToBox(itemId, groups))}</li>)}
                 </ul>
-                <button className={styles.modalButton} onClick={handleCopy}>Share your results</button>
-                <button className={styles.modalButton} onClick={() => setShow(false)}>Show Puzzle</button>
+                <button className="button" onClick={handleCopy}>Share your results</button>
+                <button className="button" onClick={() => setShow(false)}>Show Puzzle</button>
             </div>
             <Notification text={notifText} visible={notifVisible} />
         </div>
