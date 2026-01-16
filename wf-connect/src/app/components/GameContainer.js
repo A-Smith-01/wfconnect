@@ -35,10 +35,11 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
     // Reset game state if new seed
     useEffect(() => {
         if (newGameSeed) {
-            clearLives();
-            clearGridItems();
-            clearFoundGroups();
-            clearGuesses();
+            console.log("Starting new game, resetting state");
+            setLives(4);
+            setGridItems(gridItems);
+            setFoundGroups([]);
+            setGuesses([]);
         }else{
             // Check for game over
             if (lives <= 0 || foundGroups.length === groups.length) {
