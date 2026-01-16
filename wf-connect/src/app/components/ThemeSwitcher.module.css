@@ -1,0 +1,61 @@
+.container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 50;
+}
+
+.button {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.button.active {
+    box-shadow: 0px 0px 1px 0px var(--text-secondary);
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--text-secondary);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background-color: var(--background);
+  box-shadow: 0px 0px 1px 0px var(--text-secondary);
+  min-width: 150px;
+  width: 100%;
+  z-index: 51;
+}
+
+.option {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+}
+
+.option:hover {
+  background-color: var(--foreground);
+}
+
+.option:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.option:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.checkmark {
+  margin-left: 12px;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+

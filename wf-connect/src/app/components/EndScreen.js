@@ -49,8 +49,8 @@ export default function EndModal({groups, guesses, lives, setShow}) {
                 <ul className={styles.guesses}>
                     {guesses.map((guess,index) => <li className={styles.guess} key={index}>{guess.map(itemId => itemToBox(itemId, groups))}</li>)}
                 </ul>
-                <button className="button" onClick={handleCopy}>Share your results</button>
-                <button className="button" onClick={() => setShow(false)}>Show Puzzle</button>
+                <button className={`button ${styles.modalButton}`} onClick={handleCopy}>Share your results</button>
+                <button className={`button ${styles.modalButton}`} onClick={() => setShow(false)}>Show Puzzle</button>
             </div>
             <Notification text={notifText} visible={notifVisible} />
         </div>
