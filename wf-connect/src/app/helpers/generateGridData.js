@@ -47,7 +47,7 @@ export default function generateGridData(seed) {
 
     gridItems = shuffleArray(gridItems);
     
-    console.log('Normalized groups:', normalizedGroups);
-    console.log('Final grid items:', gridItems);
+    // console.log('Normalized groups:', normalizedGroups);
+    // console.log('Final grid items:', gridItems);
     return { gridItems, groups: normalizedGroups };
 }

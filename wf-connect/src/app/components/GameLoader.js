@@ -21,7 +21,7 @@ export default function GameLoader() {
         setIsHydrated(true);
         const dateSeed = generateDateSeed();
         if (seed !== dateSeed) {
-            console.log('New day detected, generating new seed:', dateSeed);
+            // console.log('New day detected, generating new seed:', dateSeed);
             setSeed(dateSeed);
             setIsNewDay(true);
         }
@@ -33,7 +33,7 @@ export default function GameLoader() {
 
     const { gridItems, groups } = generateGridData(USE_RANDOM_DATA ? null : seed);
 
-    console.log('Using seed:', seed);
-    console.log(gridItems);
+    // console.log('Using seed:', seed);
+    // console.log(gridItems);
     return <GameContainer gridItems={gridItems} groups={groups} newGameSeed={isNewDay}/>;
 }

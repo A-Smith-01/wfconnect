@@ -9,7 +9,7 @@ export default function GroupGrid({foundGroups}) {
                 <div key={group.id} className={styles.group} style={{backgroundColor: colourMap[group.id].colour}}>
                     <div className={styles.groupImages}>
                         {group.items.map((item) => (
-                            <Image key={item.id} src={item.imageUrl} alt={item.name} width="60" height="60" objectFit="contain" />
+                            <Image key={item.id} src={item.imageUrl} alt={item.name} width="60" height="60"/>
                         ))}
                     </div>
                     <div className={styles.groupInfo}>

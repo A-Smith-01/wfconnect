@@ -8,13 +8,6 @@ import styles from './GameContainer.module.css';
 import useNotification from '../hooks/useNotification';
 import sleep from '../helpers/sleep';
 
-function guessToString(guess, groups){
-    return guess.reduce((acc, itemId) => {
-        const itemGroup = groups.find(group => group.items.includes(itemId));
-        return acc + colourMap[itemGroup.id].emote;
-    }, "");
-}
-
 export default function GameContainer({gridItems, groups, newGameSeed}) {
     const [isHydrated, setIsHydrated] = useState(false);
     const [lives, setLives, clearLives] = useLocalStorage('lives', 4);
@@ -170,7 +163,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
     <div className="game-container">
         <h1 className={styles.title}>WFConnect</h1>
         <div className={styles.gridContainer}>
-        {showGameOver ? <EndScreen guesses={guesses.map(guess => guessToString(guess, groups))} lives={lives} setShow={setShowGameOver} /> : null}
+        {showGameOver ? <EndScreen groups={groups} guesses={guesses} lives={lives} setShow={setShowGameOver} /> : null}
         <GameGrid 
             items={remainingGridItems} 
             selectedItems={selectedItems} 

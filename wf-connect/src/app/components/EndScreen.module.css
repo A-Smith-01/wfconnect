@@ -29,7 +29,7 @@
 }
 
 .guesses{
-    font-size: 24px;
+    margin: auto;
 }
 
 .modalButton{
@@ -40,4 +40,16 @@
     padding: 5px;
     margin: 20px auto;
     font-size: 22px;
+}
+
+.guess{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.itemBox{
+    width: 48px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+
 }
