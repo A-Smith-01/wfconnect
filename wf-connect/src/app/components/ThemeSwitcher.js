@@ -3,12 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./ThemeSwitcher.module.css";
 
-const THEMES = [
-  { value: "classic", label: "Classic" },
-  { value: "vitruvian", label: "Vitruvian" },
-];
-
-export default function ThemeSwitcher({ currentTheme, onThemeChange }) {
+export default function ThemeSwitcher({ themes, onThemeChange }) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -34,20 +29,22 @@ export default function ThemeSwitcher({ currentTheme, onThemeChange }) {
         className={`button ${styles.button} ${isOpen ? styles.active : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        CHANGE THEME
+        <b>CHANGE THEME</b>
       </button>
       
       {isOpen && (
         <div className={styles.menu}>
-          {THEMES.map((theme) => (
-            <div
-              key={theme.value}
-              className={`${styles.option} ${theme.value}`}
-              onClick={() => handleThemeSelect(theme.value)}
-            >
+          {Object.keys(themes).map((themeKey) => {
+            const theme = themes[themeKey];
+            return (
+              <div
+                key={theme.class}
+                className={`${styles.option} ${theme.class}`}
+                onClick={() => handleThemeSelect(theme.class)}
+              >
               <span className={styles.label}>{theme.label.toUpperCase()}</span>
             </div>
-          ))}
+          )})}
         </div>
       )}
     </div>

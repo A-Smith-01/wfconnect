@@ -11,19 +11,19 @@
 }
 
 .classic{
-  --background: #5D7B87;
-  --foreground: #425B69;
+  --background: #5D7B87e8;
+  --foreground: #425b6986;
   --text-primary: #FFFFFF;
   --text-secondary: #E8D55D;
   --accents: #FFFFFF;
 }
 
 .vitruvian{
-  --background: #313042;
-  --foreground: #23212fbd;
+  --background: #313042e8;
+  --foreground: #23212f7c;
   --text-primary: #BEA966;
   --text-secondary: #F5E3AD;
-  --accents: #BEA966;
+  --accents: #bea966;
 }
 
 html,
@@ -70,6 +70,22 @@ button{
     box-shadow: 0px 0px 1px 0px var(--text-secondary);
     color: var(--text-secondary);
     border-bottom: 2px solid var(--text-secondary);
+}
+
+.bg-gradient{
+  background: linear-gradient(135deg, var(--background), var(--accents));
+}
+
+.noise-background{
+  /* background: linear-gradient(135deg, var(--background), var(--accents)); */
+  background-color: var(--background);
+}
+
+.smoke-container{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 .flex{
