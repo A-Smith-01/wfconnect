@@ -1,6 +1,6 @@
 import Image from "next/image"
 import styles from './groupGrid.module.css';
-import colourMap from "../../colourMap";
+import colourMap from "../../data/colourMap";
 
 export default function GroupGrid({foundGroups}) {
     return (

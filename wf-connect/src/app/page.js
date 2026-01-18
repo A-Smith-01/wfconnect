@@ -22,6 +22,10 @@ export default function Home() {
     }
   }
 
+  if (!theme) {
+    return null; // or a loading indicator
+  }
+
   return (
     <div className={`${styles.page} ${theme.class}`}>
       <Smoke backgroundColour={theme.background} foregroundColour={theme.foreground}/>
