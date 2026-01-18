@@ -13,7 +13,7 @@
 }
 
 .controlButton{
-    
+    height: fit-content;
 }
 
 .controlButton:not(:last-child){

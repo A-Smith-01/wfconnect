@@ -8,10 +8,9 @@ div.notification{
     background-color: var(--foreground);
     color: var(--text-primary);
     padding: 5px;
-    border-radius: 8px;
-    font-size: large;
+    font-size: 22px;
     font-weight: 400;
-    border: 1px solid black;
+    box-shadow: 0 0 1px var(--accents);
 }
 
 div.visible{
