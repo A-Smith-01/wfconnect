@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 const Futura_Medium = localFont({
-  src: "./fonts/FUTURAMEDIUM.ttf",
+  src: "./fonts/futuramedium.ttf",
   display: "swap",
   variable: "--font-futura-medium",
 });
 
 const Ailerons = localFont({
-  src: "./fonts/Ailerons-Typeface.otf",
+  src: "./fonts/ailerons-typeface.otf",
   display: "swap",
   variable: "--font-ailerons",
 });
