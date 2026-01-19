@@ -26,11 +26,26 @@
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-10px); }
-    75% { transform: translateX(10px); }
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-3deg); }
+}
+
+@keyframes redGlow {
+    from {background-color: rgb(199, 96, 96);}
+    to {background-color: var(--foreground);}
 }
 
 .shakeAnimation {
-    animation: shake 0.5s ease-in-out;
+    animation: shake 0.2s ease-in-out, redGlow 1s ease-out;
+}
+
+@keyframes glow {
+    from {background-color: var(--foreground);}
+    to {background-color: var(--accents);}
+}
+
+.glowAnimation{
+    animation: glow 0.3s linear;
+    background-color: var(--accents);
 }
