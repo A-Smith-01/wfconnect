@@ -16,7 +16,11 @@ export default function SelectGrid({ items,selectedItems, handleSelectItem, glow
                         ${shakingItems.includes(item.id) ? styles.shakeAnimation : ''}`} 
                     onClick={() => handleSelectItem(item.id)}
                 >
-                    <Image src={item.imageUrl} alt={item.name} width={80} height={80} />
+                    <Image 
+                        src={item.imageUrl} 
+                        alt={item.name} 
+                        fill={true} 
+                        style={{"padding":"5px"}}/>
                     {/* <p>{item.name}</p> */}
                 </button>
             ))}
