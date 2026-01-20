@@ -4,7 +4,7 @@ import colourMap from "../../data/colourMap";
 
 export default function GroupGrid({foundGroups}) {
     return (
-        <div className={styles.groupGrid}>
+        <>
             {foundGroups.map((group) => (
                 <div key={group.id} className={styles.group} style={{backgroundColor: colourMap[group.id].colour}}>
                     <div className={styles.groupImages}>
@@ -26,7 +26,6 @@ export default function GroupGrid({foundGroups}) {
                     </div>
                 </div>
             ))}
-            
-        </div>
+        </>
     )
 }

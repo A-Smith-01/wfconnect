@@ -3,9 +3,15 @@ import Image from 'next/image';
 import FlipMove from 'react-flip-move';
 
 export default function SelectGrid({ items,selectedItems, handleSelectItem, glowingItems, shakingItems }) {
+    if(items.length === 0){
+        return null;
+    }
     return (
-        <div className={styles.selectGrid}>
-            <FlipMove leaveAnimation="none">
+            <FlipMove 
+                leaveAnimation="none" 
+                className={styles.selectGrid} 
+                style={{'grid-column':`1 / span 4`,
+                        'grid-row':`${5 - items.length / 4} / span ${items.length / 4}`}}>
             {items.map((item) => (
                 <button 
                     key={item.id} 
@@ -25,6 +31,5 @@ export default function SelectGrid({ items,selectedItems, handleSelectItem, glow
                 </button>
             ))}
             </FlipMove>
-        </div>
     )
 }
