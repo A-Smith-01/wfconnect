@@ -1,19 +1,21 @@
-.selectGrid > *{
+.selectGrid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 6px;
     column-gap: 10px;
+    width: 100%;
 }
 
 .gridItem{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     margin: 0;
     background-color: var(--foreground);
     box-shadow: 0px 0px 1px var(--accents);
-    aspect-ratio: 1;
     border-bottom: 4px solid transparent;
+    padding: 5px;
 }
 
 .gridItem:hover{
@@ -26,11 +28,26 @@
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-10px); }
-    75% { transform: translateX(10px); }
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(3deg); }
+    75% { transform: rotate(-3deg); }
+}
+
+@keyframes redGlow {
+    from {background-color: rgb(199, 96, 96);}
+    to {background-color: var(--foreground);}
 }
 
 .shakeAnimation {
-    animation: shake 0.5s ease-in-out;
+    animation: shake 0.2s ease-in-out, redGlow 1s ease-out;
+}
+
+@keyframes glow {
+    from {background-color: var(--foreground);}
+    to {background-color: var(--accents);}
+}
+
+.glowAnimation{
+    animation: glow 0.3s linear;
+    background-color: var(--accents);
 }

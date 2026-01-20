@@ -4,12 +4,18 @@ import colourMap from "../../data/colourMap";
 
 export default function GroupGrid({foundGroups}) {
     return (
-        <div className={styles.groupGrid}>
+        <>
             {foundGroups.map((group) => (
                 <div key={group.id} className={styles.group} style={{backgroundColor: colourMap[group.id].colour}}>
                     <div className={styles.groupImages}>
                         {group.items.map((item) => (
-                            <Image key={item.id} src={item.imageUrl} alt={item.name} width="60" height="60"/>
+                            <div key={item.id} className={styles.groupImageWrapper}>
+                                <Image 
+                                    key={item.id} 
+                                    src={item.imageUrl} 
+                                    alt={item.name} 
+                                    fill={true}/>
+                            </div>
                         ))}
                     </div>
                     <div className={styles.groupInfo}>
@@ -20,7 +26,6 @@ export default function GroupGrid({foundGroups}) {
                     </div>
                 </div>
             ))}
-            
-        </div>
+        </>
     )
 }

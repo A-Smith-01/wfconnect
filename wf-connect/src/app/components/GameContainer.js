@@ -16,6 +16,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
     const [foundGroups, setFoundGroups, clearFoundGroups] = useLocalStorage('foundGroups', []);
     const [guesses, setGuesses, clearGuesses] = useLocalStorage('guesses', []);
     const [freezeInput, setFreezeInput] = useState(false);
+    const [glowingItems, setGlowingItems] = useState([]);
     const [shakingItems, setShakingItems] = useState([]);
     const [showGameOver, setShowGameOver] = useState(false);
     const { text: notifText, visible: notifVisible, showNotification } = useNotification();
@@ -129,33 +130,47 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
                 setFreezeInput(false);
                 return;
             }else if (highestMatches === 4) {
-                const groupItems = remainingGridItems.filter(item => correctGroup.items.includes(item.id));
-                revealGroup(correctGroup, remainingGridItems, foundGroups)
-                setSelectedItems([]);
-                setFreezeInput(false);
-                if (foundGroups.length + 1 === groups.length) {
-                    gameOver = true;
-                }
-            } else {
-                console.log("Incorrect");
-                if (highestMatches === 3) showNotification("Almost there!", 1500);
-                setShakingItems(selectedItems);
-                setLives(lives - 1);
-                setTimeout(() => {
-                    setShakingItems([])
+                selectedItems.forEach((itemId,idx) => {
+                    sleep(400 * idx).then(() => {
+                        setGlowingItems(prev => [...prev, itemId]);
+                    });
+                });
+                sleep(1700).then(() => {
+                    revealGroup(correctGroup, remainingGridItems, foundGroups)
                     setSelectedItems([]);
                     setFreezeInput(false);
-                }, 500);
-                if (lives - 1 <= 0) {
-                    gameOver = true;
-                }
+                    if (foundGroups.length + 1 === groups.length) {
+                        setTimeout(() => {
+                            handleGameOver();
+                        }, 0);
+                    }
+                });
+            } else {
+                console.log("Incorrect");
+                selectedItems.forEach((itemId,idx) => {
+                    sleep(400 * idx).then(() => {
+                        setGlowingItems(prev => [...prev, itemId]);
+                    });
+                });
+                sleep(1700).then(() => {
+                    setGlowingItems([]);
+                
+                    if (highestMatches === 3) showNotification("Almost there!", 2000);
+                    setShakingItems(selectedItems);
+                    setLives(lives - 1);
+                    setTimeout(() => {
+                        setShakingItems([])
+                        setSelectedItems([]);
+                        setFreezeInput(false);
+                    }, 1000);
+                    if (lives - 1 <= 0) {
+                        setTimeout(() => {
+                            handleGameOver();
+                        }, 500);
+                    }
+                });
             }
             setGuesses([...guesses, selectedItems]);
-
-            // Check for game over
-            if (gameOver) {
-                handleGameOver();
-            }
         }
     }
 
@@ -171,6 +186,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
             foundGroups={foundGroups} 
             notifText={notifText}
             notifVisible={notifVisible}
+            glowingItems={glowingItems}
             shakingItems={shakingItems}
         />
         </div>

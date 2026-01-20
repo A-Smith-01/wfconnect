@@ -3,7 +3,14 @@ import SelectGrid from "./grids/SelectGrid";
 import Notification from "./Notification";
 import styles from './GameGrid.module.css';
 
-export default function GameGrid({ items,selectedItems, handleSelectItem, foundGroups, notifText, notifVisible, shakingItems }) {
+export default function GameGrid({ 
+    items,selectedItems, 
+    handleSelectItem, 
+    foundGroups, 
+    notifText, 
+    notifVisible,
+    glowingItems, 
+    shakingItems }) {
     return (
         <div className={styles.gameGrid}>
             <GroupGrid foundGroups={foundGroups} />
@@ -11,6 +18,7 @@ export default function GameGrid({ items,selectedItems, handleSelectItem, foundG
                 items={items} 
                 selectedItems={selectedItems} 
                 handleSelectItem={handleSelectItem}
+                glowingItems={glowingItems}
                 shakingItems={shakingItems} />
             <Notification text={notifText} visible={notifVisible} />
         </div>

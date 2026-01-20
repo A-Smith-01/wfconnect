@@ -1,7 +1,9 @@
 .gridContainer{
     display: flex;
     position: relative;
-    width: 550px;
+    max-width: 550px;
+    width: 100vw;
+    aspect-ratio: 1;
     justify-content: center;
 }
 
@@ -10,6 +12,16 @@
     margin-top: 20px;
     padding: 0px 20px
 
+}
+
+@media (max-width: 448px) {
+    .gridBelow{
+        flex-direction: column;
+    }
+
+    .gridBelow > *{
+        margin: auto;
+    }
 }
 
 .controlButton{
