@@ -175,7 +175,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
     }
 
     return (
-    <div className="game-container">
+    <div className={styles.gameContainer}>
         <h1 className={styles.title}><span className={styles.highlight}>WF</span>Connect</h1>
         <div className={styles.gridContainer}>
         {showGameOver ? <EndScreen groups={groups} guesses={guesses} lives={lives} setShow={setShowGameOver} /> : null}

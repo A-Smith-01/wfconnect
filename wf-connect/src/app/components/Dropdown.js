@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import styles from "./ThemeSwitcher.module.css";
+import { useState, useRef, useEffect, Children } from "react";
+import styles from "./Dropdownselector.module.css";
 
-export default function ThemeSwitcher({ themes, onThemeChange }) {
+export default function Dropdownselector({ children, name, closeOnSelect = true }) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -18,9 +18,10 @@ export default function ThemeSwitcher({ themes, onThemeChange }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleThemeSelect = (theme) => {
-    onThemeChange(theme);
-    setIsOpen(false);
+  const handleClick = () => {
+    if (closeOnSelect){
+        setIsOpen(false);
+    }
   };
 
   return (
@@ -29,22 +30,18 @@ export default function ThemeSwitcher({ themes, onThemeChange }) {
         className={`button ${styles.button} ${isOpen ? styles.active : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <b>CHANGE THEME</b>
+        <b>{name}</b>
       </button>
       
       {isOpen && (
         <div className={styles.menu}>
-          {Object.keys(themes).map((themeKey) => {
-            const theme = themes[themeKey];
-            return (
+          {Children.map(children,child => (
               <div
-                key={theme.class}
-                className={`${styles.option} ${theme.class}`}
-                onClick={() => handleThemeSelect(theme.class)}
+                onClick={() => handleClick()}
               >
-              <span className={styles.label}>{theme.label.toUpperCase()}</span>
+              {child}
             </div>
-          )})}
+          ))}
         </div>
       )}
     </div>

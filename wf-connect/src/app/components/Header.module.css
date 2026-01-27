@@ -1,0 +1,25 @@
+.header{
+    padding: 10px;
+}
+
+.option {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+  transition: var(--background) 0.2s ease;
+}
+
+.option:hover {
+  background-color: var(--foreground);
+}
+
+.option:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.option:last-child {
+  border-radius: 0 0 4px 4px;
+}
