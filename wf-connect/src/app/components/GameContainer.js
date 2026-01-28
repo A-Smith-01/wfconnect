@@ -8,7 +8,7 @@ import styles from './GameContainer.module.css';
 import useNotification from '../hooks/useNotification';
 import sleep from '../helpers/sleep';
 
-export default function GameContainer({gridItems, groups, newGameSeed}) {
+export default function GameContainer({gridItems, groups, newGameSeed, showText, allowWiki}) {
     const [isHydrated, setIsHydrated] = useState(false);
     const [lives, setLives, clearLives] = useLocalStorage('lives', 4);
     const [remainingGridItems, setGridItems, clearGridItems] = useLocalStorage('remainingGridItems', gridItems);
@@ -188,6 +188,8 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
             notifVisible={notifVisible}
             glowingItems={glowingItems}
             shakingItems={shakingItems}
+            showText={showText}
+            allowWiki={allowWiki}
         />
         </div>
         <div className={styles.gridBelow}>

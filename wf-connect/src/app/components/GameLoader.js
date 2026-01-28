@@ -5,7 +5,7 @@ import generateGridData from '../helpers/generateGridData';
 import GameContainer from './GameContainer';
 import { useLocalStorage } from 'react-use';
 
-export default function GameLoader() {
+export default function GameLoader({showText, allowWiki}) {
     const [seed, setSeed, clearSeed] = useLocalStorage('gameSeed', null);
     const [isNewDay, setIsNewDay] = useState(false);
     const [isHydrated, setIsHydrated] = useState(false);
@@ -32,8 +32,12 @@ export default function GameLoader() {
     }
 
     const { gridItems, groups } = generateGridData(USE_RANDOM_DATA ? null : seed);
-
     // console.log('Using seed:', seed);
     // console.log(gridItems);
-    return <GameContainer gridItems={gridItems} groups={groups} newGameSeed={isNewDay}/>;
+    return <GameContainer 
+                gridItems={gridItems} 
+                groups={groups} 
+                newGameSeed={isNewDay}
+                showText={showText}
+                allowWiki={allowWiki} />;
 }

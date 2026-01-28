@@ -1,0 +1,33 @@
+.switchbutton{
+    display: flex;
+    width: 90px;
+    height: 30px;
+    border: 1px solid var(--accents);
+}
+
+.grilllines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.grilllines > svg{
+    color: var(--accents);
+    margin: auto;
+}
+
+.switchicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: var(--accents);
+    
+}
+
+.switchicon > svg{
+    color: var(--text-secondary);
+    margin: auto;
+    backdrop-filter: opacity(30%);
+}

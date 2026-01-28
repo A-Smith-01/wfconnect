@@ -10,7 +10,9 @@ export default function GameGrid({
     notifText, 
     notifVisible,
     glowingItems, 
-    shakingItems }) {
+    shakingItems,
+    showText,
+    allowWiki }) {
     return (
         <div className={styles.gameGrid}>
             <GroupGrid foundGroups={foundGroups} />
@@ -19,7 +21,9 @@ export default function GameGrid({
                 selectedItems={selectedItems} 
                 handleSelectItem={handleSelectItem}
                 glowingItems={glowingItems}
-                shakingItems={shakingItems} />
+                shakingItems={shakingItems}
+                showText={showText}
+                allowWiki={allowWiki} />
             <Notification text={notifText} visible={notifVisible} />
         </div>
     )

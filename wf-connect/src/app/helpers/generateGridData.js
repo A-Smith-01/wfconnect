@@ -40,7 +40,8 @@ export default function generateGridData(seed) {
                 gridItems.push({
                     id: itemId,
                     name: itemId,
-                    imageUrl: itemData.image})
+                    imageUrl: itemData.image,
+                    link: itemData.link})
             }
         });
     });
