@@ -25,8 +25,7 @@
   left: 0;
   background-color: var(--background);
   box-shadow: 0px 0px 1px 0px var(--text-secondary);
-  min-width: 150px;
-  width: max(100%,fit-content);
+  min-width: 100%;
   z-index: 51;
 }
 

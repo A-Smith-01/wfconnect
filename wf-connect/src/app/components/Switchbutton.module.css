@@ -21,13 +21,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 50%;
-    background-color: var(--accents);
+    /* background-color: var(--accents); */
     
 }
 
 .switchicon > svg{
-    color: var(--text-secondary);
+    z-index: 1;
+    color: var(--text-primary);
     margin: auto;
     backdrop-filter: opacity(30%);
+}
+
+.switchicon:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    backdrop-filter: opacity(70%) brightness(160%) blur(8px);
 }
