@@ -5,23 +5,27 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  preload: true
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  preload: true
 });
 
 const Futura_Medium = localFont({
   src: "./fonts/futuramedium.ttf",
   display: "swap",
   variable: "--font-futura-medium",
+  preload: true
 });
 
 const Ailerons = localFont({
   src: "./fonts/ailerons-typeface.otf",
   display: "swap",
   variable: "--font-ailerons",
+  preload: true
 });
 
 export const metadata = {

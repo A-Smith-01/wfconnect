@@ -11,6 +11,7 @@ export default function Home() {
   const [theme, setTheme] = useLocalStorage("theme", null);
   const [showText, setShowText] = useLocalStorage("useText", false);
   const [allowWiki, setAllowWiki] = useLocalStorage("allowWiki", false);
+  const [winHistory, setWinHistory] = useLocalStorage("winHistory", {wins:  0, streak: 0, highestStreak: 0});
 
   if(!theme) {
     setTheme(pageStyles.classic);
@@ -46,7 +47,11 @@ export default function Home() {
         showText={showText}
         allowWiki={allowWiki}/>
       <main className={styles.main}>
-        <GameLoader showText={showText} allowWiki={allowWiki} />
+        <GameLoader 
+          showText={showText} 
+          allowWiki={allowWiki}
+           winHistory={winHistory} 
+           setWinHistory={setWinHistory}/>
       </main>
     </div>
   );

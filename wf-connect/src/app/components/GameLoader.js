@@ -5,11 +5,11 @@ import generateGridData from '../helpers/generateGridData';
 import GameContainer from './GameContainer';
 import { useLocalStorage } from 'react-use';
 
-export default function GameLoader({showText, allowWiki}) {
+export default function GameLoader({showText, allowWiki, winHistory, setWinHistory}) {
     const [seed, setSeed, clearSeed] = useLocalStorage('gameSeed', null);
     const [isNewDay, setIsNewDay] = useState(false);
     const [isHydrated, setIsHydrated] = useState(false);
-    const USE_RANDOM_DATA = false;
+    const USE_RANDOM_DATA = true;
 
     function generateDateSeed(){
         const today = new Date();
@@ -19,10 +19,11 @@ export default function GameLoader({showText, allowWiki}) {
     // Initialize seed on mount
     useEffect(() => {
         setIsHydrated(true);
+        const randomSeed = Math.random()*10e6|0;
         const dateSeed = generateDateSeed();
-        if (seed !== dateSeed) {
-            // console.log('New day detected, generating new seed:', dateSeed);
-            setSeed(dateSeed);
+        if (seed !== dateSeed || USE_RANDOM_DATA) {
+            console.log('New day detected, generating new seed:', dateSeed);
+            setSeed(USE_RANDOM_DATA ? randomSeed : dateSeed);
             setIsNewDay(true);
         }
     }, []);
@@ -31,13 +32,16 @@ export default function GameLoader({showText, allowWiki}) {
         return null;
     }
 
-    const { gridItems, groups } = generateGridData(USE_RANDOM_DATA ? null : seed);
-    // console.log('Using seed:', seed);
-    // console.log(gridItems);
+    const { gridItems, groups } = generateGridData(seed);
+    console.log('Using seed:', seed);
+    console.log('Generated items:',gridItems);
+    console.log(isNewDay)
     return <GameContainer 
                 gridItems={gridItems} 
                 groups={groups} 
                 newGameSeed={isNewDay}
                 showText={showText}
-                allowWiki={allowWiki} />;
+                allowWiki={allowWiki}
+                winHistory={winHistory}
+                setWinHistory={setWinHistory} />;
 }

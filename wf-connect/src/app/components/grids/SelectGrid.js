@@ -6,7 +6,6 @@ import { useLocalStorage } from 'react-use';
 
 export default function SelectGrid({ 
     items,selectedItems, handleSelectItem, glowingItems, shakingItems, showText, allowWiki }) {
-        console.log(items)
     if(items.length === 0){
         return null;
     }

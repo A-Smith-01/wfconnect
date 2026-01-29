@@ -28,11 +28,11 @@
     color: var(--text-secondary);
 }
 
-.endMessage{
+.endModal p{
     font-size: 18px;
 }
 
-.lives{
+.endModal b{
     color: var(--text-secondary);
 }
 
