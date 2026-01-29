@@ -3,9 +3,22 @@ import Dropdown from "./Dropdown";
 import Switchbutton from "./Switchbutton";
 
 export default function Header({
-    handleThemeSelect, handleUseTextToggle, handleAllowWikiToggle, showText, allowWiki, pageStyles}) {
+    handleThemeSelect, handleUseTextToggle, handleAllowWikiToggle, showText, allowWiki, pageStyles, winHistory}) {
     return (
         <header className={styles.header}>
+            <Dropdown 
+            name="STATS"
+            closeOnSelect={false}>
+                <div className={styles.option}>
+                    <span>Wins: {winHistory.wins}</span>
+                </div>
+                <div className={styles.option}>
+                    <span>Current Streak: {winHistory.streak}</span>
+                </div>
+                <div className={styles.option}>
+                    <span>Highest Streak: {winHistory.highestStreak}</span>
+                </div>
+            </Dropdown>
             <Dropdown 
             name="CHANGE THEME"
             closeOnSelect={true}>

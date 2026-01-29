@@ -45,7 +45,8 @@ export default function Home() {
         handleAllowWikiToggle={handleAllowWikiToggle}
         pageStyles={pageStyles} 
         showText={showText}
-        allowWiki={allowWiki}/>
+        allowWiki={allowWiki}
+        winHistory={winHistory}/>
       <main className={styles.main}>
         <GameLoader 
           showText={showText} 
