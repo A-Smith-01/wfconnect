@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import styles from './Switchbutton.module.css';
+import styles from '../styles/Switchbutton.module.css';
 
 function grillLines() {
     return (

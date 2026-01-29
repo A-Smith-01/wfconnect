@@ -1,4 +1,4 @@
-import styles from './selectGrid.module.css';
+import styles from '../../styles/selectGrid.module.css';
 import Image from 'next/image';
 import FlipMove from 'react-flip-move';
 import { useEffect, useState } from 'react';

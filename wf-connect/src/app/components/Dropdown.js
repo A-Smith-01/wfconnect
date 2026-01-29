@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, Children } from "react";
-import styles from "./Dropdownselector.module.css";
+import styles from "../styles/Dropdownselector.module.css";
 
 export default function Dropdownselector({ children, name, closeOnSelect = true }) {
   const [isOpen, setIsOpen] = useState(false);

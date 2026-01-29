@@ -1,4 +1,4 @@
-import styles from "./Header.module.css";
+import styles from "../styles/Header.module.css";
 import Dropdown from "./Dropdown";
 import Switchbutton from "./Switchbutton";
 

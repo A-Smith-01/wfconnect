@@ -1,4 +1,4 @@
-import styles from './Notification.module.css';
+import styles from '../styles/Notification.module.css';
 
 export default function Notification({text, visible}) {
     return (

@@ -1,7 +1,7 @@
 import GroupGrid from "./grids/GroupGrid";
 import SelectGrid from "./grids/SelectGrid";
 import Notification from "./Notification";
-import styles from './GameGrid.module.css';
+import styles from '../styles/GameGrid.module.css';
 
 export default function GameGrid({ 
     items,selectedItems, 

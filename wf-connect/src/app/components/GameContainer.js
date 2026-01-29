@@ -1,10 +1,9 @@
 'use client';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocalStorage } from 'react-use';
 import GameGrid from './GameGrid';
 import EndScreen from './EndScreen';
-import colourMap from '../data/colourMap';
-import styles from './GameContainer.module.css';
+import styles from '../styles/GameContainer.module.css';
 import useNotification from '../hooks/useNotification';
 import sleep from '../helpers/sleep';
 

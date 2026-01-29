@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './EndScreen.module.css';
+import styles from '../styles/EndScreen.module.css';
 import colourMap from '../data/colourMap';
 import useNotification from '../hooks/useNotification';
 import Notification from './Notification';
