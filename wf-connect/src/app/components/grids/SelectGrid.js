@@ -1,8 +1,11 @@
-import styles from './selectGrid.module.css';
+import styles from '../../styles/selectGrid.module.css';
 import Image from 'next/image';
 import FlipMove from 'react-flip-move';
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from 'react-use';
 
-export default function SelectGrid({ items,selectedItems, handleSelectItem, glowingItems, shakingItems }) {
+export default function SelectGrid({ 
+    items,selectedItems, handleSelectItem, glowingItems, shakingItems, showText, allowWiki }) {
     if(items.length === 0){
         return null;
     }
@@ -21,13 +24,14 @@ export default function SelectGrid({ items,selectedItems, handleSelectItem, glow
                         ${glowingItems.includes(item.id) ? styles.glowAnimation : ''} 
                         ${shakingItems.includes(item.id) ? styles.shakeAnimation : ''}`} 
                     onClick={() => handleSelectItem(item.id)}
+                    onContextMenu={(e) => {allowWiki && window.open(item.link, '_blank').focus();e.preventDefault();}}
                 >
                     <Image 
                         src={item.imageUrl} 
                         alt={item.name} 
                         fill={true} 
                         style={{"padding":"5px"}}/>
-                    {/* <p>{item.name}</p> */}
+                    {showText && <p>{item.name}</p>}
                 </button>
             ))}
             </FlipMove>

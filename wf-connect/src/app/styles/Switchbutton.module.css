@@ -1,0 +1,43 @@
+.switchbutton{
+    display: flex;
+    width: 90px;
+    height: 30px;
+    border: 1px solid var(--accents);
+}
+
+.grilllines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.grilllines > svg{
+    color: var(--accents);
+    margin: auto;
+}
+
+.switchicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    /* background-color: var(--accents); */
+    
+}
+
+.switchicon > svg{
+    z-index: 1;
+    color: var(--text-primary);
+    margin: auto;
+    backdrop-filter: opacity(30%);
+}
+
+.switchicon:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    backdrop-filter: opacity(70%) brightness(160%) blur(8px);
+}

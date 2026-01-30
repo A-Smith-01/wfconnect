@@ -10,6 +10,7 @@ function shuffleArray(array) {
 }
 
 export default function generateGridData(seed) {
+    console.log("Generating grid data with seed:", seed);
     const rawGroups = seed ? generatePuzzle({seed:seed}) : generatePuzzle();
 
     const groupsArray = Array.isArray(rawGroups)
@@ -40,7 +41,8 @@ export default function generateGridData(seed) {
                 gridItems.push({
                     id: itemId,
                     name: itemId,
-                    imageUrl: itemData.image})
+                    imageUrl: itemData.image,
+                    link: itemData.link})
             }
         });
     });

@@ -1,0 +1,36 @@
+.header{
+    display: flex;
+    padding: 10px;
+}
+
+.option {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+  transition: var(--background) 0.2s ease;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.option span{
+  display: flex;
+  white-space: normal;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  column-gap: 20px;
+}
+
+.option:hover {
+  background-color: var(--foreground);
+  color: var(--text-secondary);
+}
+
+.option > :not(:last-child){
+  /* margin-right: 20px; */
+}

@@ -1,14 +1,14 @@
 'use client';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocalStorage } from 'react-use';
 import GameGrid from './GameGrid';
 import EndScreen from './EndScreen';
-import colourMap from '../data/colourMap';
-import styles from './GameContainer.module.css';
+import styles from '../styles/GameContainer.module.css';
 import useNotification from '../hooks/useNotification';
 import sleep from '../helpers/sleep';
 
-export default function GameContainer({gridItems, groups, newGameSeed}) {
+export default function GameContainer({
+    gridItems, groups, newGameSeed, showText, allowWiki, winHistory, setWinHistory}) {
     const [isHydrated, setIsHydrated] = useState(false);
     const [lives, setLives, clearLives] = useLocalStorage('lives', 4);
     const [remainingGridItems, setGridItems, clearGridItems] = useLocalStorage('remainingGridItems', gridItems);
@@ -61,7 +61,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
 
     function revealGroup(group, currentGridItems, currentFoundGroups){
         return new Promise((resolve) => {
-            console.log("Revealing group:", group);
+            // console.log("Revealing group:", group);
             const groupItems = currentGridItems.filter(item => group.items.includes(item.id));
             const otherItems = currentGridItems.filter(item => !group.items.includes(item.id));
             // Rearrange group items to front of grid unless it's the last group
@@ -78,7 +78,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
         });
     }
 
-    async function handleGameOver(){
+    async function handleGameOver(isWin = false) {
         setFreezeInput(true);
         let currentItems = remainingGridItems;
         let currentFoundGroups = foundGroups;
@@ -93,6 +93,16 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
                 await sleep(1000);
             }
         }
+        // Update win history and streak counter
+        if (isWin) {
+            const newWins = winHistory.wins + 1;
+            const newStreak = winHistory.streak + 1;
+            const newHighestStreak = Math.max(newStreak, winHistory.highestStreak);
+            setWinHistory({wins: newWins, streak: newStreak, highestStreak: newHighestStreak});
+        } else {
+            setWinHistory({wins: winHistory.wins, streak: 0, highestStreak: winHistory.highestStreak});
+        }
+
         setShowGameOver(true);
     }
 
@@ -104,7 +114,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
             let alreadyGuessed = false;
             let gameOver = false;
             // Check if guess was already made
-            console.log(selectedItems);
+            // console.log(selectedItems);
             guesses.forEach(guess => {
                 const guessSet = new Set(guess);
                 const selectedSet = new Set(selectedItems);
@@ -141,7 +151,7 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
                     setFreezeInput(false);
                     if (foundGroups.length + 1 === groups.length) {
                         setTimeout(() => {
-                            handleGameOver();
+                            handleGameOver(true);
                         }, 0);
                     }
                 });
@@ -175,10 +185,17 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
     }
 
     return (
-    <div className="game-container">
+    <div className={styles.gameContainer}>
         <h1 className={styles.title}><span className={styles.highlight}>WF</span>Connect</h1>
         <div className={styles.gridContainer}>
-        {showGameOver ? <EndScreen groups={groups} guesses={guesses} lives={lives} setShow={setShowGameOver} /> : null}
+        {showGameOver ? 
+            <EndScreen 
+                groups={groups} 
+                guesses={guesses} 
+                lives={lives} 
+                setShow={setShowGameOver} 
+                winHistory={winHistory}/> 
+            : null}
         <GameGrid 
             items={remainingGridItems} 
             selectedItems={selectedItems} 
@@ -188,6 +205,8 @@ export default function GameContainer({gridItems, groups, newGameSeed}) {
             notifVisible={notifVisible}
             glowingItems={glowingItems}
             shakingItems={shakingItems}
+            showText={showText}
+            allowWiki={allowWiki}
         />
         </div>
         <div className={styles.gridBelow}>

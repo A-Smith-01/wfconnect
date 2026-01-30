@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './EndScreen.module.css';
+import styles from '../styles/EndScreen.module.css';
 import colourMap from '../data/colourMap';
 import useNotification from '../hooks/useNotification';
 import Notification from './Notification';
@@ -17,7 +17,7 @@ function itemToBox(itemId, groups){
     return <div key={itemId} className={styles.itemBox} style={{backgroundColor: colour}}></div>;
 }
 
-export default function EndModal({groups, guesses, lives, setShow}) {
+export default function EndModal({groups, guesses, lives, setShow, winHistory}) {
     const { text: notifText, visible: notifVisible, showNotification } = useNotification();
     
     let endMessage = "";
@@ -49,6 +49,7 @@ export default function EndModal({groups, guesses, lives, setShow}) {
                 <ul className={styles.guesses}>
                     {guesses.map((guess,index) => <li className={styles.guess} key={index}>{guess.map(itemId => itemToBox(itemId, groups))}</li>)}
                 </ul>
+                {winHistory.streak > 1 && <p className={styles.streakMessage}>You're on a <b>{winHistory.streak}</b> win streak</p>}
                 <button className={`button ${styles.modalButton}`} onClick={handleCopy}>Share your results</button>
                 <button className={`button ${styles.modalButton}`} onClick={() => setShow(false)}>Show Puzzle</button>
             </div>

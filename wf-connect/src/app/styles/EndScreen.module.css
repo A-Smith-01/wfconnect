@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 10;
     border-radius: 16px;
     backdrop-filter: blur(2px);
     display: flex;
@@ -11,6 +11,7 @@
 }
 
 .endModal{
+    margin-top: 40px;
     width: 80%;
     aspect-ratio: 1;
     background-color: var(--background);
@@ -24,15 +25,15 @@
 }
 
 .endModal h2{
-    font-size: 42px;
+    font-size: min(42px, calc(20px + 1.5vw));
     color: var(--text-secondary);
 }
 
-.endMessage{
+.endModal p{
     font-size: 18px;
 }
 
-.lives{
+.endModal b{
     color: var(--text-secondary);
 }
 
