@@ -29,12 +29,12 @@
 }
 
 .gridItem > p{
+    position: absolute;;
     z-index: 1;
+    bottom: 0;
     width: 100%;
-    margin-top: auto;
-    padding: 5px;
     text-align: center;
-    background: -webkit-linear-gradient(transparent, var(--foreground));
+    background-image: linear-gradient(to top, var(--foreground) 75%, transparent);
 }
 
 @keyframes shake {

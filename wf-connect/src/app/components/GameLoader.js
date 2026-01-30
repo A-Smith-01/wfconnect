@@ -9,7 +9,7 @@ export default function GameLoader({showText, allowWiki, winHistory, setWinHisto
     const [seed, setSeed, clearSeed] = useLocalStorage('gameSeed', null);
     const [isNewDay, setIsNewDay] = useState(false);
     const [isHydrated, setIsHydrated] = useState(false);
-    const USE_RANDOM_DATA = true;
+    const USE_RANDOM_DATA = false;
 
     function generateDateSeed(){
         const today = new Date();
