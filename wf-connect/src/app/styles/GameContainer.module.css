@@ -12,6 +12,7 @@
     max-width: 550px;
     width: 100vw;
     aspect-ratio: 1;
+    padding: 0px 5px;
     justify-content: center;
 }
 

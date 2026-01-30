@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useRef, useEffect, Children } from "react";
+import Image from "next/image";
 import styles from "../styles/Dropdownselector.module.css";
 
-export default function Dropdownselector({ children, name, closeOnSelect = true }) {
+export default function Dropdownselector({ children, name, useIcons, closeOnSelect = true }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [alignRight, setAlignRight] = useState(false);
   const containerRef = useRef(null);
   const menuRef = useRef(null);
 
@@ -51,7 +51,9 @@ export default function Dropdownselector({ children, name, closeOnSelect = true 
         className={`button ${styles.button} ${isOpen ? styles.active : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <b>{name}</b>
+        { useIcons ? 
+        <span className="material-symbols-rounded" style={{ fontSize: '24px' }}>{name}</span>:
+        <b>{name}</b>}
       </button>
       
       {isOpen && (

@@ -16,7 +16,8 @@
 }
 
 .option span{
-  white-space: nowrap;
+  display: flex;
+  white-space: normal;
 }
 
 .grid {

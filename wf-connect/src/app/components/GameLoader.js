@@ -33,9 +33,9 @@ export default function GameLoader({showText, allowWiki, winHistory, setWinHisto
     }
 
     const { gridItems, groups } = generateGridData(seed);
-    console.log('Using seed:', seed);
-    console.log('Generated items:',gridItems);
-    console.log(isNewDay)
+    // console.log('Using seed:', seed);
+    // console.log('Generated items:',gridItems);
+    // console.log(isNewDay)
     return <GameContainer 
                 gridItems={gridItems} 
                 groups={groups} 

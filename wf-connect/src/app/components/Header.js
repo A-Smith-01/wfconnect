@@ -1,13 +1,28 @@
 import styles from "../styles/Header.module.css";
 import Dropdown from "./Dropdown";
 import Switchbutton from "./Switchbutton";
+import { useState, useEffect } from "react";
 
 export default function Header({
     handleThemeSelect, handleUseTextToggle, handleAllowWikiToggle, showText, allowWiki, pageStyles, winHistory}) {
+    const [useIcons, setUseIcons] = useState(false);
+
+    // Determine if icons should be used based on window width
+    useEffect(() => {
+        const checkWidth = () => {
+            setUseIcons(window.innerWidth < 430);
+        };
+
+        checkWidth();
+        window.addEventListener("resize", checkWidth);
+        return () => window.removeEventListener("resize", checkWidth);
+    }, []);
+
     return (
         <header className={styles.header}>
             <Dropdown 
-            name="STATS"
+            name={useIcons ? "bar_chart" : "STATS"}
+            useIcons={useIcons}
             closeOnSelect={false}>
                 <div className={styles.option}>
                     <span>Wins: {winHistory.wins}</span>
@@ -20,7 +35,8 @@ export default function Header({
                 </div>
             </Dropdown>
             <Dropdown 
-            name="CHANGE THEME"
+            name={useIcons ? "palette" :"CHANGE THEME"}
+            useIcons={useIcons}
             closeOnSelect={true}>
                 {Object.keys(pageStyles).map(key => (
                     <div 
@@ -32,7 +48,8 @@ export default function Header({
                 ))}
             </Dropdown>
             <Dropdown
-            name="OPTIONS"
+            name={useIcons ? "settings" :"OPTIONS"}
+            useIcons={useIcons}
             closeOnSelect={false}>
                 <div className={`${styles.option} ${styles.grid}`}>
                     <span>Show Names</span>

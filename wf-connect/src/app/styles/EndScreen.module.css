@@ -11,6 +11,7 @@
 }
 
 .endModal{
+    margin-top: 40px;
     width: 80%;
     aspect-ratio: 1;
     background-color: var(--background);
